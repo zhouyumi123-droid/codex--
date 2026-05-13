@@ -7,8 +7,9 @@
 1. 先读本文件。
 2. 读 `CURRENT_STATE_当前状态.md`。
 3. 读 `TASK_LOG_执行日志.md`。
-4. 如需继续具体文件，按 `CURRENT_STATE_当前状态.md` 里的“关键文件”列表打开。
-5. 每完成一个阶段，更新 `CURRENT_STATE_当前状态.md` 和 `TASK_LOG_执行日志.md`。
+4. 读 `SESSION_HISTORY_会话历史.md`，查看不可覆盖的长期过程记录。
+5. 如需继续具体文件，按 `CURRENT_STATE_当前状态.md` 里的“关键文件”列表打开。
+6. 每完成一个阶段，更新 `CURRENT_STATE_当前状态.md`，并追加 `TASK_LOG_执行日志.md` / `SESSION_HISTORY_会话历史.md`。
 
 ## 给 Codex 的恢复指令
 
@@ -18,6 +19,7 @@
 d:\codex\cdx-IDE\projects\奥斯翰国际学校\98_project_memory_上下文恢复\START_HERE_恢复上下文.md
 d:\codex\cdx-IDE\projects\奥斯翰国际学校\98_project_memory_上下文恢复\CURRENT_STATE_当前状态.md
 d:\codex\cdx-IDE\projects\奥斯翰国际学校\98_project_memory_上下文恢复\TASK_LOG_执行日志.md
+d:\codex\cdx-IDE\projects\奥斯翰国际学校\98_project_memory_上下文恢复\SESSION_HISTORY_会话历史.md
 ```
 
 然后再根据当前任务继续执行，不要只依赖聊天窗口历史。
@@ -38,4 +40,3 @@ d:\codex\cdx-IDE\projects\奥斯翰国际学校\98_project_memory_上下文恢�
 - 关键文件路径
 - 下一步执行顺序
 - 重要业务判断
-

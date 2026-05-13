@@ -42,6 +42,7 @@
    - Base Token：`TlV5boVxna6LTLsdl5PcFbRunv4`
    - 已创建 8 张业务表：直播排期表、选题库、脚本生产表、物料资产表、直播执行表、评论问题库、线索跟进表、直播复盘表。
    - 已预置 A-Level、IG、DSE 首批选题、6 月排期、脚本任务、物料任务。
+   - 已给用户 `周yt` 授予 `full_access` 管理权限。
    - 注意：飞书默认空表 `数据表` 仍保留，未删除。
 
 ## 当前未完成/可继续推进
@@ -68,6 +69,7 @@
 | `README.md` | 项目目录结构说明 |
 | `98_project_memory_上下文恢复\START_HERE_恢复上下文.md` | 下次恢复入口 |
 | `98_project_memory_上下文恢复\TASK_LOG_执行日志.md` | 已执行动作日志 |
+| `98_project_memory_上下文恢复\SESSION_HISTORY_会话历史.md` | 长期追加式会话历史 |
 | `03_working_files_工作文件\feishu_live_base_spec.json` | 飞书 Base 搭建规格 |
 | `03_working_files_工作文件\create_feishu_live_base.mjs` | 飞书 Base 一键创建脚本 |
 | `03_working_files_工作文件\飞书权限阻塞与继续执行说明.md` | 当前飞书权限阻塞说明 |
