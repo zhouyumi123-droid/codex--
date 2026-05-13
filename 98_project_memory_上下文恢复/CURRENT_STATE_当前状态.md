@@ -32,7 +32,9 @@
 4. 已建立本地 Git 仓库：
    - 仓库路径：`d:\codex\cdx-IDE\projects\奥斯翰国际学校`
    - 首次提交：`ceda974 Initial commit for Oxstand project`
-   - 远端仓库：尚未配置。
+   - 远端仓库：`https://github.com/zhouyumi123-droid/codex--`
+   - 当前分支：`main`
+   - 远端跟踪：`origin/main`
 
 ## 当前未完成/可继续推进
 
@@ -47,7 +49,7 @@
 4. 生成直播封面提示词/视觉模板说明。
 5. 生成顾问承接 SOP 和 A/B/C 线索分级话术。
 6. 如用户授权使用飞书 CLI，可进一步创建飞书文档、多维表格或任务。
-7. 如用户提供 GitHub/Gitee/企业 Git 远端地址，可继续执行 `git remote add origin ...` 和 `git push`。
+7. 后续每完成重要文件变更，应执行 `git status`、`git add`、`git commit`、`git push`，同步到 GitHub。
 
 ## 关键文件
 

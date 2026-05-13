@@ -67,4 +67,17 @@
 状态：
 
 - 本地 Git 快照已完成。
-- 当前还没有配置远端仓库，所以尚未推送到 GitHub/Gitee/企业 Git。
+- 已配置 GitHub 远端并推送成功。
+
+远端信息：
+
+- GitHub 仓库：`https://github.com/zhouyumi123-droid/codex--`
+- Git remote：`https://github.com/zhouyumi123-droid/codex--.git`
+- 本地分支：`main`
+- 远端跟踪：`origin/main`
+
+推送过程：
+
+- 通过 GitHub API 确认目标仓库为 `zhouyumi123-droid/codex--`，描述为“奥斯翰CODEX执行项”。
+- 使用 Git Credential Manager 完成 GitHub 登录授权。
+- 执行 `git push -u origin main` 成功。
