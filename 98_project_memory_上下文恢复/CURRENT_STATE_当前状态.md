@@ -36,15 +36,20 @@
    - 当前分支：`main`
    - 远端跟踪：`origin/main`
 
+5. 已创建飞书刘校长 6 月直播运营 Base：
+   - Base 名称：`刘校长6月直播运营工作台_A-Level_IG_DSE`
+   - Base 链接：`https://bcnletyv09fe.feishu.cn/base/TlV5boVxna6LTLsdl5PcFbRunv4`
+   - Base Token：`TlV5boVxna6LTLsdl5PcFbRunv4`
+   - 已创建 8 张业务表：直播排期表、选题库、脚本生产表、物料资产表、直播执行表、评论问题库、线索跟进表、直播复盘表。
+   - 已预置 A-Level、IG、DSE 首批选题、6 月排期、脚本任务、物料任务。
+   - 注意：飞书默认空表 `数据表` 仍保留，未删除。
+
 ## 当前未完成/可继续推进
 
 下一步建议优先级：
 
-1. 飞书开发者后台确认并发布 `base:app:create` 权限：
-   - 权限链接：`https://open.feishu.cn/page/scope-apply?clientID=cli_a9763cda117a1bd7&scopes=base%3Aapp%3Acreate`
-   - 当前 CLI 调用 `base +base-create` 返回：`App scope not enabled: required scope base:app:create [99991672]`
-2. 权限生效后运行：
-   - `node .\03_working_files_工作文件\create_feishu_live_base.mjs`
+1. 如用户确认，可删除飞书默认空表 `数据表`。
+2. 配置更细的视图筛选/排序/分组，例如 A-Level、IG、DSE 分课程视图。
 3. 继续生成首批 3 场直播脚本：
    - 北大校长视角：什么样的孩子适合读国际学校？
    - A-Level 到底难不难？家长最容易误解的 5 件事
@@ -66,6 +71,7 @@
 | `03_working_files_工作文件\feishu_live_base_spec.json` | 飞书 Base 搭建规格 |
 | `03_working_files_工作文件\create_feishu_live_base.mjs` | 飞书 Base 一键创建脚本 |
 | `03_working_files_工作文件\飞书权限阻塞与继续执行说明.md` | 当前飞书权限阻塞说明 |
+| `03_working_files_工作文件\feishu_live_base_result.json` | 飞书 Base 创建结果和表 ID |
 
 ## 重要业务判断
 

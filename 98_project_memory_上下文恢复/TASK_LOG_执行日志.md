@@ -100,11 +100,7 @@
 
 当前阻塞：
 
-- `auth status` 仍显示 user token 未落地：`Token does not exist or has been cleared`。
-- 使用 bot 创建 Base 时，飞书 OpenAPI 返回：
-  - `App scope not enabled: required scope base:app:create [99991672]`
-- 飞书返回权限开通链接：
-  - `https://open.feishu.cn/page/scope-apply?clientID=cli_a9763cda117a1bd7&scopes=base%3Aapp%3Acreate`
+- 已解除。用户在飞书开发者后台开通成功后，bot 身份可以创建 Base。
 
 已生成本地可继续执行文件：
 
@@ -117,3 +113,24 @@
 ```powershell
 & 'C:\Program Files\nodejs\node.exe' '.\03_working_files_工作文件\create_feishu_live_base.mjs'
 ```
+
+结果：
+
+- 已创建 Base：`刘校长6月直播运营工作台_A-Level_IG_DSE`
+- Base 链接：`https://bcnletyv09fe.feishu.cn/base/TlV5boVxna6LTLsdl5PcFbRunv4`
+- Base Token：`TlV5boVxna6LTLsdl5PcFbRunv4`
+- 已创建业务表：
+  - `直播排期表`：`tbllASaJmr1YDwPN`
+  - `选题库`：`tbltT7QDrddJHbLk`
+  - `脚本生产表`：`tblntmheMDY610jQ`
+  - `物料资产表`：`tblSZ3nll6DcIhah`
+  - `直播执行表`：`tblrtxYKxhNGSBhq`
+  - `评论问题库`：`tblSKjB5kbajfsUM`
+  - `线索跟进表`：`tblI9ZCljn7xwZaT`
+  - `直播复盘表`：`tbl5xl0N1OLfFPWP`
+- 已写入首批数据：
+  - 6 条 A-Level / IG / DSE 选题。
+  - 3 条 6 月首周直播排期。
+  - 3 条脚本生产任务。
+  - 3 条直播封面物料任务。
+- 注意：飞书默认空表 `数据表` 仍保留，未删除。

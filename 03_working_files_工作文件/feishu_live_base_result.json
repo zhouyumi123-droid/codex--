@@ -1,0 +1,30 @@
+{
+  "baseName": "刘校长6月直播运营工作台_A-Level_IG_DSE",
+  "baseToken": "TlV5boVxna6LTLsdl5PcFbRunv4",
+  "tables": {
+    "直播排期表": {
+      "tableId": "tbllASaJmr1YDwPN"
+    },
+    "选题库": {
+      "tableId": "tbltT7QDrddJHbLk"
+    },
+    "脚本生产表": {
+      "tableId": "tblntmheMDY610jQ"
+    },
+    "物料资产表": {
+      "tableId": "tblSZ3nll6DcIhah"
+    },
+    "直播执行表": {
+      "tableId": "tblrtxYKxhNGSBhq"
+    },
+    "评论问题库": {
+      "tableId": "tblSKjB5kbajfsUM"
+    },
+    "线索跟进表": {
+      "tableId": "tblI9ZCljn7xwZaT"
+    },
+    "直播复盘表": {
+      "tableId": "tbl5xl0N1OLfFPWP"
+    }
+  }
+}

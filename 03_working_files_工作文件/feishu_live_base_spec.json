@@ -17,7 +17,7 @@
         { "type": "text", "name": "场控" },
         { "type": "select", "name": "目标家长", "multiple": false, "options": [{ "name": "初三家长" }, { "name": "高一家长" }, { "name": "转轨家庭" }, { "name": "A-Level意向" }, { "name": "IG意向" }, { "name": "DSE意向" }, { "name": "低分转轨" }, { "name": "其他" }] },
         { "type": "select", "name": "直播目标", "multiple": true, "options": [{ "name": "预约到校" }, { "name": "留资" }, { "name": "课程信任" }, { "name": "升学答疑" }, { "name": "招生转化" }] },
-        { "type": "select", "name": "状态", "multiple": false, "options": [{ "name": "待选题", "hue": "Gray" }, { "name": "脚本中", "hue": "Blue" }, { "name": "待预热", "hue": "Purple" }, { "name": "待直播", "hue": "Orange" }, { "name": "已直播", "hue": "Green" }, { "name": "已复盘", "hue": "DarkGreen" }] },
+        { "type": "select", "name": "状态", "multiple": false, "options": [{ "name": "待选题", "hue": "Gray" }, { "name": "脚本中", "hue": "Blue" }, { "name": "待预热", "hue": "Purple" }, { "name": "待直播", "hue": "Orange" }, { "name": "已直播", "hue": "Green" }, { "name": "已复盘", "hue": "Green" }] },
         { "type": "text", "name": "转化动作" },
         { "type": "text", "name": "备注" }
       ],
@@ -208,3 +208,4 @@
     }
   }
 }
+

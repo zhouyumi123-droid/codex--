@@ -14,6 +14,7 @@ desktop.ini
 .temp/
 tmp/
 temp/
+.lark_tmp/
 
 # Local environment
 .env
