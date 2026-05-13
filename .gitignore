@@ -1,0 +1,30 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+
+# Logs and runtime caches
+*.log
+.cache/
+.temp/
+tmp/
+temp/
+
+# Local environment
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+.venv/
+venv/
+
+# Generated archive bundles
+*.zip
+*.rar
+*.7z

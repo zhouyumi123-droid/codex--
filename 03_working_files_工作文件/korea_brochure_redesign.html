@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>奥斯翰2026招生_韩国留学方向_宣传册设计_优化版</title>
+<style>
+@page{size:297mm 167.0625mm;margin:0}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{margin:0;background:#f3f2f0;color:#17172a;font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",Arial,sans-serif}
+.page{width:297mm;height:167.0625mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+.page:last-child{page-break-after:auto}
+:root{--navy:#20245d;--violet:#5b4aa0;--red:#ea3d63;--gold:#c9a550;--teal:#159b91;--wine:#8e2444;--ink:#151526;--muted:#666b78;--line:#ded9cc;--paper:#fbfaf7}
+.cover{background:var(--navy);color:#fff}
+.cover-photo{position:absolute;left:0;right:0;top:0;height:92mm;background:url("reference_original/reference_korea_page1.png") center top/cover no-repeat;filter:saturate(.96) contrast(.98)}
+.cover-scrim{position:absolute;left:0;right:0;top:0;height:92mm;background:linear-gradient(90deg,rgba(31,27,86,.45),rgba(31,27,86,.08) 45%,rgba(31,27,86,.2))}
+.curve-a{position:absolute;left:-18mm;right:-12mm;top:71mm;height:83mm;background:var(--navy);border-radius:0;clip-path:ellipse(68% 100% at 42% 0)}
+.curve-b{position:absolute;right:-45mm;bottom:-70mm;width:142mm;height:142mm;background:var(--red);border-radius:50% 0 0 0}
+.cover-brand-panel{position:absolute;left:7mm;top:8mm;width:124mm;height:31mm;background:rgba(31,27,86,.88);backdrop-filter:blur(1px);z-index:3}
+.cover-brand{position:absolute;left:15mm;top:12mm;display:grid;grid-template-columns:20mm auto;gap:6mm;align-items:center;z-index:4}
+.seal{width:20mm;height:20mm;display:block}
+.seal img{width:100%;height:100%;object-fit:contain;display:block}
+.brand-cn{font-size:15px;font-weight:800;letter-spacing:6px}
+.brand-en{margin-top:1.2mm;font:700 6.8px Georgia,serif;letter-spacing:1.2px}
+.cover-title{position:absolute;left:17mm;bottom:20mm;width:165mm;color:#fff;z-index:4}
+.cover-title .kicker{font-size:11px;letter-spacing:4px;color:#f4cf70;font-weight:700;margin-bottom:5mm}
+.cover-title h1{margin:0;font-size:17mm;line-height:1.02;font-weight:900;letter-spacing:0;color:#fff}
+.cover-title h2{margin:3.5mm 0 0;font-size:8mm;line-height:1.22;font-weight:600;letter-spacing:0;color:#fff}
+.cover-title .sub{margin-top:6mm;color:#ff4b67;font-size:5.2mm;font-weight:800;letter-spacing:1.5px}
+.cover-facts{position:absolute;right:16mm;bottom:15mm;text-align:right;font-size:4.2mm;line-height:1.72;font-weight:600}
+.watermark{position:absolute;right:4mm;top:-17mm;font-size:48mm;font-weight:900;color:rgba(32,36,93,.055);letter-spacing:0}
+.header{position:absolute;left:14mm;right:14mm;top:10mm;height:18mm;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.header .small-brand{font-size:3.8mm;font-weight:800;color:var(--navy);letter-spacing:.6px}
+.header .page-no{width:12mm;height:12mm;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold);font-size:4mm;font-weight:900}
+.body{position:absolute;left:14mm;right:14mm;top:35mm;bottom:12mm}
+.footer{position:absolute;left:14mm;right:14mm;bottom:5mm;border-top:1px solid #ebe6da;padding-top:2mm;color:#96908a;font-size:2.7mm;display:flex;justify-content:space-between}
+.title-row{display:grid;grid-template-columns:18mm 1fr;gap:5mm;align-items:start;margin-bottom:7mm}
+.num{width:16mm;height:16mm;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:6mm;font-weight:900;box-shadow:0 0 0 1.2mm #f1ede2}
+h2{margin:0;color:var(--ink);font-size:8.6mm;line-height:1.18;letter-spacing:0}
+.lead{margin:3mm 0 0;color:var(--muted);font-size:3.7mm;line-height:1.7}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:7mm}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:2mm;padding:6mm;min-height:38mm}
+.card.dark{background:var(--navy);border-color:var(--navy);color:#fff}
+.card h3{margin:0 0 4mm;font-size:5.7mm;line-height:1.28;color:inherit}
+.card p{margin:0;font-size:3.45mm;line-height:1.72;color:inherit}
+.card ul{margin:4mm 0 0;padding:0;list-style:none}
+.card li{position:relative;margin:2mm 0 0;padding-left:5mm;font-size:3.35mm;line-height:1.65}
+.card li:before{content:"";position:absolute;left:0;top:2.2mm;width:2.1mm;height:2.1mm;border-radius:50%;background:var(--gold)}
+.tag{display:inline-block;margin-bottom:4mm;padding:1.3mm 3.2mm;border-radius:99px;background:#efe6cf;color:#8a6925;font-size:3.1mm;font-weight:900}
+.tag.red{background:#fde4ea;color:#c5274d}.tag.teal{background:#dff4f1;color:#117b73}.tag.wine{background:#f2dfe6;color:#79203d}
+.quote-band{position:absolute;left:0;right:0;bottom:0;height:19mm;background:linear-gradient(90deg,var(--navy),#3e327f);color:#fff;display:flex;align-items:center;justify-content:center;font-size:5.4mm;font-weight:800;letter-spacing:.5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-bottom:6mm}
+.stat{border-top:1.3mm solid var(--gold);background:#fff;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:5mm;min-height:31mm}
+.stat b{display:block;color:var(--navy);font-size:8mm;line-height:1;margin-bottom:3mm}
+.stat span{font-size:3.25mm;line-height:1.5;color:#33394a;font-weight:700}
+.programs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm}
+.program{position:relative;padding:6mm;background:#fff;border:1px solid var(--line);min-height:71mm}
+.program:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2mm;background:var(--gold)}
+.program.teal:before{background:var(--teal)}.program.wine:before{background:var(--wine)}
+.program h3{margin:0 0 3mm;font-size:5.5mm}.program p{margin:0 0 3mm;font-size:3.35mm;line-height:1.65;color:#343849}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:3.2mm}
+.step{background:#fff;border:1px solid var(--line);padding:5mm 4mm;min-height:67mm;position:relative}
+.step:after{content:"";position:absolute;right:-3.3mm;top:26mm;width:3.3mm;height:1px;background:var(--line)}
+.step:last-child:after{display:none}
+.step b{display:block;color:var(--red);font-size:8mm;margin-bottom:2mm}.step h3{margin:0 0 3mm;font-size:4.8mm}.step p{margin:0;font-size:3.15mm;line-height:1.62;color:#444958}
+.essay{display:grid;grid-template-columns:43mm 1fr;gap:7mm;align-items:start}
+.essay-mark{height:95mm;background:linear-gradient(160deg,var(--navy),var(--violet));color:#fff;padding:7mm 5mm;display:flex;flex-direction:column;justify-content:space-between}
+.essay-mark b{font-size:19mm;line-height:.9}.essay-mark span{font-size:3.7mm;line-height:1.55;font-weight:700}
+.text-cols{columns:2;column-gap:8mm;font-size:3.35mm;line-height:1.78;color:#2d3242}
+.text-cols p{break-inside:avoid;margin:0 0 4mm}
+.qa{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.q{background:#fff;border:1px solid var(--line);padding:5mm;min-height:39mm}
+.q b{display:block;color:var(--navy);font-size:4.3mm;line-height:1.35;margin-bottom:2.5mm}
+.q span{font-size:3.15mm;line-height:1.62;color:#444958}
+.strip{position:absolute;left:0;top:0;bottom:0;width:9mm;background:linear-gradient(var(--navy),var(--violet))}
+.accent-gold{color:var(--gold)}.accent-red{color:var(--red)}
+</style>
+</head>
+<body>
+<section class="page cover">
+  <div class="cover-photo"></div><div class="cover-scrim"></div><div class="curve-a"></div><div class="curve-b"></div>
+  <div class="cover-brand-panel"></div>
+  <div class="cover-brand"><div class="seal"><img src="../02_assets_视觉素材/old_logo_crop.png" alt="奥斯翰旧版logo"></div><div><div class="brand-cn">深圳奥斯翰外语学校</div><div class="brand-en">OXSTAND INTERNATIONAL SCHOOL, SHENZHEN</div></div></div>
+  <div class="cover-title"><div class="kicker">OXSTAND · 2026招生宣传文案</div><h1>韩国大学<br>直升课程</h1><h2>把韩国名校申请，提前三年放进课表里</h2><div class="sub">直通韩国顶尖名校　开启你的国际化未来</div></div>
+  <div class="cover-facts">深圳本土办学20余年<br>深圳市一级学校<br>深圳市高考先进单位<br>广东省民办教育“示范名校”</div>
+</section>
+
+<section class="page">
+  <div class="watermark">01</div><div class="header"><div class="small-brand">OXSTAND · Korean university direct admission program</div><div class="page-no">01</div></div>
+  <div class="body">
+    <div class="title-row"><div class="num">01</div><div><h2>从深圳出发，把韩语学习、TOPIK考试、大学申请和升学指导放进同一张三年路线图。</h2><p class="lead">适用：招生宣传册 / 线上详情页 / 咨询顾问口径 / 家长说明会</p></div></div>
+    <div class="grid2">
+      <div class="card"><span class="tag">核心宣传点 01</span><h3>不是“学完韩语再找中介”，而是在校内完成韩国大学直升准备</h3><ul><li>高一 TOPIK 1-2级，高二 TOPIK 3-4级，高三冲刺 TOPIK 5-6级，学习节奏和本科申请节点同步推进。</li><li>学校提供选校、文书、自我介绍、学习计划、面试辅导、网申等全流程服务，家长不用在培训机构与中介之间反复拼接。</li><li>高考成绩不是韩国本科申请的必要项，可作为辅助材料；学生以校内成绩证明、TOPIK成绩和申请材料完成升学准备。</li></ul></div>
+      <div class="card dark"><span class="tag red">核心宣传点 02</span><h3>不是“保录承诺”，而是用真实成绩把名校路径做稳</h3><ul><li>校方提供数据：毕业生保持 100% 升学率，90%以上 TOP20 重本率，40%以上 TOP10 顶尖本科录取率。</li><li>TOPIK中高级通过率 100%；TOPIK 5-6级可为申请顶尖院校和奖学金减免创造更强条件。</li><li>与成均馆大学、京畿大学、全州大学保持交流合作，同时明确不做海外高中“保录”式夸大宣传。</li></ul></div>
+    </div>
+  </div>
+  <div class="footer"><span>深圳学生的韩国大学直升方案</span><span>校内学韩语 · 校内备TOPIK · 校内做申请</span></div>
+</section>
+
+<section class="page">
+  <div class="strip"></div><div class="watermark">02</div><div class="header"><div class="small-brand">Admissions message</div><div class="page-no">02</div></div>
+  <div class="body">
+    <div class="title-row"><div class="num">02</div><div><h2>招生主标题建议</h2><p class="lead">高一开始，不急着追热点；按年级完成语言、材料、面试和院校匹配。</p></div></div>
+    <div class="stats">
+      <div class="stat"><b>100%</b><span>毕业生保持 100% 升学率</span></div>
+      <div class="stat"><b>90%+</b><span>90%以上 TOP20 重本率</span></div>
+      <div class="stat"><b>40%+</b><span>40%以上 TOP10 顶尖本科录取率</span></div>
+      <div class="stat"><b>5-6级</b><span>TOPIK高阶可增强名校与奖学金竞争力</span></div>
+    </div>
+    <div class="card" style="min-height:48mm;background:#fbf7ed;border-color:#dfc987"><h3 style="font-size:8mm;color:var(--navy)">把韩国名校申请，提前三年放进课表里</h3><p style="font-size:4.1mm">深圳学生的韩国大学直升方案：校内学韩语、校内备TOPIK、校内做申请。</p></div>
+  </div>
+  <div class="quote-band">时间省、路径清、风险低、预算可控</div>
+</section>
+
+<section class="page">
+  <div class="watermark">03</div><div class="header"><div class="small-brand">Program zones</div><div class="page-no">03</div></div>
+  <div class="body">
+    <div class="title-row"><div class="num">03</div><div><h2>项目分区文案</h2><p class="lead">不同项目用色区分：大学直升用金色，TOPIK体系用青绿色，艺术特色班用酒红色。</p></div></div>
+    <div class="programs">
+      <div class="program"><span class="tag">主色：金色</span><h3>A. 韩国大学直升课程</h3><p>适合希望本科赴韩升学的初高中家庭</p><p>从选校、文书、学习计划、面试到网申，全流程在校内推进。</p></div>
+      <div class="program teal"><span class="tag teal">主色：青绿色</span><h3>B. TOPIK 1-6级进阶体系</h3><p>适合零基础到中高级持续提升</p><p>高一打基础，高二进中级，高三冲刺高阶与奖学金竞争力。</p></div>
+      <div class="program wine"><span class="tag wine">主色：酒红色</span><h3>C. 韩国艺术留学特色班</h3><p>计划2026年秋季开设与招录</p><p>面向实用音乐、舞蹈、设计、编导等方向，学校提供专业方向和作品集要求指导。</p></div>
+    </div>
+  </div>
+  <div class="footer"><span>Oxstand international school</span><span>Project color system</span></div>
+</section>
+
+<section class="page">
+  <div class="watermark">04</div><div class="header"><div class="small-brand">Shenzhen market message</div><div class="page-no">04</div></div>
+  <div class="body">
+    <div class="title-row"><div class="num">04</div><div><h2>深圳市场表达角度</h2><p class="lead">少讲“快速过级”，多讲“三年节奏”；少讲“保录”，多讲“真实录取、真实TOPIK、真实申请流程”。</p></div></div>
+    <div class="grid3">
+      <div class="card"><span class="tag">选择对比</span><p>深圳家长常见选择包括韩语培训班、留学中介、外籍人员子女学校等；奥斯翰的表达重点应放在“高中阶段校内一体化升学路径”。</p></div>
+      <div class="card"><span class="tag teal">表达重点</span><p>少讲“快速过级”，多讲“三年节奏”；少讲“保录”，多讲“真实录取、真实TOPIK、真实申请流程”。</p></div>
+      <div class="card"><span class="tag red">家庭利益点</span><p>面向深圳家庭的关键利益点：时间省、路径清、风险低、预算可控，一年约15-20万留学成本预期更容易进入家庭决策。</p></div>
+    </div>
+  </div>
+  <div class="quote-band">高中阶段校内一体化升学路径</div>
+</section>
+
+<section class="page">
+  <div class="watermark">05</div><div class="header"><div class="small-brand">Three-year route map</div><div class="page-no">05</div></div>
+  <div class="body">
+    <div class="title-row"><div class="num">05</div><div><h2>招生册正文</h2><p class="lead">真正要提前准备的，不只是韩语。</p></div></div>
+    <div class="essay">
+      <div class="essay-mark"><b>3年</b><span>在学校学韩语，在学校备TOPIK，在学校做升学材料，在老师跟进下完成大学申请。</span></div>
+      <div class="text-cols">
+        <p>如果孩子想去韩国读大学，真正要提前准备的，不只是韩语。</p>
+        <p>韩国本科申请看语言能力，也看高中阶段成绩、材料表达、专业匹配、面试状态与申请节奏。奥斯翰韩国大学直升课程，把这些分散在外部机构里的环节，放回高中三年进行规划：在学校学韩语，在学校备TOPIK，在学校做升学材料，在老师跟进下完成大学申请。</p>
+        <p>对深圳家庭来说，这意味着孩子不用等到高三才匆忙找中介，也不用把时间切碎在不同培训班之间。高一开始建立语言基础，高二进入中高级能力，高三冲刺高阶TOPIK与名校申请，三年每一步都对应清晰目标。</p>
+        <p>我们不把韩国升学包装成“轻松保录”。顶尖院校仍然需要优秀的TOPIK成绩、稳定的校内成绩、清楚的文书表达和成熟的面试表现。真正可靠的升学，是把每一项能力提前准备好。</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>正文保持原文案</span><span>Layout redesigned for brochure rhythm</span></div>
+</section>
+
+<section class="page">
+  <div class="watermark">06</div><div class="header"><div class="small-brand">Outcomes and resources</div><div class="page-no">06</div></div>
+  <div class="body">
+    <div class="title-row"><div class="num">06</div><div><h2>成果数据表达</h2><p class="lead">用数据、师资和高校交流说明“为什么可信”。</p></div></div>
+    <div class="stats">
+      <div class="stat"><b>2023</b><span>近三年毕业生：2023年17人，韩国大学录取人数均与毕业人数一致。SKY方向录取：2023年2人。</span></div>
+      <div class="stat"><b>2024</b><span>近三年毕业生：2024年14人，韩国大学录取人数均与毕业人数一致。SKY方向录取：2024年4人。</span></div>
+      <div class="stat"><b>2025</b><span>近三年毕业生：2025年16人，韩国大学录取人数均与毕业人数一致。SKY方向录取：2025年2人。</span></div>
+      <div class="stat"><b>TOPIK</b><span>TOPIK中高级通过率 100%；TOPIK 5-6级可为申请顶尖院校和奖学金减免创造更强条件。</span></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>师资包括成均馆大学背景教师、韩国籍首席韩国语教师、韩国籍专家 KIEP 学术副校长。</h3></div>
+      <div class="card dark"><h3>韩国高丽大学、成均馆大学等高校招生官每年来校进行教育交流与招生说明。</h3></div>
+    </div>
+  </div>
+  <div class="footer"><span>真实录取 · 真实语言能力 · 真实申请流程</span><span>Oxstand</span></div>
+</section>
+
+<section class="page">
+  <div class="watermark">FAQ</div><div class="header"><div class="small-brand">Consultation copy</div><div class="page-no">07</div></div>
+  <div class="body">
+    <div class="title-row"><div class="num">07</div><div><h2>咨询页短文案</h2><p class="lead">把家长常见顾虑变成清晰、稳定的咨询口径。</p></div></div>
+    <div class="qa">
+      <div class="q"><b>高一开始准备韩国留学，晚不晚？</b><span>刚好。韩语不是临时冲刺的科目，TOPIK高阶更需要长期积累。越早开始，孩子越有时间完成语言、成绩、专业方向和申请材料的综合准备。</span></div>
+      <div class="q"><b>不会韩语可以选韩国方向吗？</b><span>可以。课程从基础阶段开始，但目标不是只会日常表达，而是逐步达到韩国本科申请所需的TOPIK等级，并为后续专业学习建立语言能力。</span></div>
+      <div class="q"><b>韩国留学安全吗？费用大概多少？</b><span>韩国整体治安环境较好，首尔、釜山等城市公共区域监控覆盖较广。留学费用通常约15-20万元/年，具体因城市、院校、住宿与生活方式不同而变化。</span></div>
+    </div>
+  </div>
+  <div class="quote-band">高一开始准备韩国留学，刚好。</div>
+</section>
+
+<section class="page">
+  <div class="watermark">08</div><div class="header"><div class="small-brand">About oxstand</div><div class="page-no">08</div></div>
+  <div class="body">
+    <div class="title-row" style="margin-bottom:5mm"><div class="num">08</div><div><h2>关于奥斯翰</h2><p class="lead">补充完整最后一页，形成正式收口页。</p></div></div>
+    <div class="grid2" style="grid-template-columns:1.05fr .95fr;gap:8mm;align-items:start">
+      <div style="position:relative;min-height:82mm;border:1px solid var(--line);overflow:hidden;background:#fff">
+        <div style="position:absolute;inset:0;background:url('reference_original/reference_korea_page2.png') left bottom/cover no-repeat;"></div>
+        <div style="position:absolute;left:0;top:0;right:0;height:26mm;background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.55),rgba(255,255,255,0));"></div>
+        <div style="position:absolute;left:5mm;top:5mm;width:18mm;height:18mm"><img src="../02_assets_视觉素材/old_logo_crop.png" alt="旧版logo" style="width:100%;height:100%;object-fit:contain"></div>
+        <div style="position:absolute;left:72mm;bottom:7mm;right:6mm">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2mm">
+            <div style="height:16mm;background:rgba(255,255,255,.88);border:1px solid #d8d2c4;border-radius:1mm"></div>
+            <div style="height:16mm;background:rgba(255,255,255,.88);border:1px solid #d8d2c4;border-radius:1mm"></div>
+            <div style="height:16mm;background:rgba(255,255,255,.88);border:1px solid #d8d2c4;border-radius:1mm"></div>
+            <div style="height:16mm;background:rgba(255,255,255,.88);border:1px solid #d8d2c4;border-radius:1mm"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 4mm;font-size:7.2mm;color:var(--violet)">深圳奥斯翰外语学校</h3>
+        <p style="margin:0 0 3mm;font-size:3.75mm;line-height:1.62;color:#2d3242">深圳奥斯翰外语学校是深圳首家开设韩国语小语种课程的全日制高中，深耕韩国留学教育17年，是华南地区韩国升学领域的标杆学校。</p>
+        <p style="margin:0 0 3mm;font-size:3.75mm;line-height:1.62;color:#2d3242">学校与韩国多所顶尖大学与高中建立深度校际交流，在国内完成语言过渡与大学申请准备，真正实现高中与韩国本科的无缝衔接。</p>
+        <div style="margin-top:3mm;border-radius:2mm;overflow:hidden;border:1px solid var(--line);height:39mm;background:#3d2d80"><img src="../02_assets_视觉素材/contact_qr_crop.png" alt="学校公众号与预约访校二维码" style="display:block;width:100%;height:100%;object-fit:cover"></div>
+        <div style="margin-top:3mm;font-size:3.25mm;line-height:1.65;color:#444958">学校招生办 0755-25805707、0755-25813956<br>深圳市罗湖区布心路2040号</div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
