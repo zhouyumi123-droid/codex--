@@ -40,9 +40,12 @@
 
 下一步建议优先级：
 
-1. 把 `刘校长直播工作流_0到1搭建方案.md` 拆成可直接执行的飞书多维表格字段清单。
-2. 生成 `刘校长直播运营工作台_字段设计.md`，用于手动或 CLI 搭建飞书 Base。
-3. 生成首批 3 场直播脚本：
+1. 飞书开发者后台确认并发布 `base:app:create` 权限：
+   - 权限链接：`https://open.feishu.cn/page/scope-apply?clientID=cli_a9763cda117a1bd7&scopes=base%3Aapp%3Acreate`
+   - 当前 CLI 调用 `base +base-create` 返回：`App scope not enabled: required scope base:app:create [99991672]`
+2. 权限生效后运行：
+   - `node .\03_working_files_工作文件\create_feishu_live_base.mjs`
+3. 继续生成首批 3 场直播脚本：
    - 北大校长视角：什么样的孩子适合读国际学校？
    - A-Level 到底难不难？家长最容易误解的 5 件事
    - 中考后再考虑国际路线，晚不晚？
@@ -60,6 +63,9 @@
 | `README.md` | 项目目录结构说明 |
 | `98_project_memory_上下文恢复\START_HERE_恢复上下文.md` | 下次恢复入口 |
 | `98_project_memory_上下文恢复\TASK_LOG_执行日志.md` | 已执行动作日志 |
+| `03_working_files_工作文件\feishu_live_base_spec.json` | 飞书 Base 搭建规格 |
+| `03_working_files_工作文件\create_feishu_live_base.mjs` | 飞书 Base 一键创建脚本 |
+| `03_working_files_工作文件\飞书权限阻塞与继续执行说明.md` | 当前飞书权限阻塞说明 |
 
 ## 重要业务判断
 

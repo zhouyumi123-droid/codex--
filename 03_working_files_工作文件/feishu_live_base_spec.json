@@ -1,0 +1,210 @@
+{
+  "baseName": "刘校长6月直播运营工作台_A-Level_IG_DSE",
+  "timeZone": "Asia/Shanghai",
+  "courseDirections": ["A-Level", "IG", "DSE"],
+  "tables": [
+    {
+      "name": "直播排期表",
+      "fields": [
+        { "type": "auto_number", "name": "直播编号", "style": { "rules": [{ "type": "text", "text": "LIVE-" }, { "type": "created_time", "date_format": "yyyyMM" }, { "type": "incremental_number", "length": 3 }] } },
+        { "type": "text", "name": "直播主题" },
+        { "type": "select", "name": "课程方向", "multiple": false, "options": [{ "name": "A-Level", "hue": "Blue", "lightness": "Light" }, { "name": "IG", "hue": "Purple", "lightness": "Light" }, { "name": "DSE", "hue": "Green", "lightness": "Light" }, { "name": "综合择校", "hue": "Orange", "lightness": "Light" }] },
+        { "type": "datetime", "name": "直播日期", "style": { "format": "yyyy-MM-dd HH:mm" } },
+        { "type": "select", "name": "直播时长", "multiple": false, "options": [{ "name": "1小时" }, { "name": "1.5小时" }, { "name": "2小时" }] },
+        { "type": "select", "name": "平台", "multiple": true, "options": [{ "name": "抖音" }, { "name": "视频号" }, { "name": "小红书" }, { "name": "多平台" }] },
+        { "type": "text", "name": "主播" },
+        { "type": "text", "name": "运营负责人" },
+        { "type": "text", "name": "场控" },
+        { "type": "select", "name": "目标家长", "multiple": false, "options": [{ "name": "初三家长" }, { "name": "高一家长" }, { "name": "转轨家庭" }, { "name": "A-Level意向" }, { "name": "IG意向" }, { "name": "DSE意向" }, { "name": "低分转轨" }, { "name": "其他" }] },
+        { "type": "select", "name": "直播目标", "multiple": true, "options": [{ "name": "预约到校" }, { "name": "留资" }, { "name": "课程信任" }, { "name": "升学答疑" }, { "name": "招生转化" }] },
+        { "type": "select", "name": "状态", "multiple": false, "options": [{ "name": "待选题", "hue": "Gray" }, { "name": "脚本中", "hue": "Blue" }, { "name": "待预热", "hue": "Purple" }, { "name": "待直播", "hue": "Orange" }, { "name": "已直播", "hue": "Green" }, { "name": "已复盘", "hue": "DarkGreen" }] },
+        { "type": "text", "name": "转化动作" },
+        { "type": "text", "name": "备注" }
+      ],
+      "views": [
+        { "name": "6月总排期", "type": "grid" },
+        { "name": "本周待直播", "type": "grid" },
+        { "name": "按课程看板", "type": "kanban" },
+        { "name": "直播日历", "type": "calendar" }
+      ]
+    },
+    {
+      "name": "选题库",
+      "fields": [
+        { "type": "text", "name": "选题名称" },
+        { "type": "select", "name": "课程方向", "multiple": false, "options": [{ "name": "A-Level" }, { "name": "IG" }, { "name": "DSE" }, { "name": "综合择校" }] },
+        { "type": "select", "name": "选题分类", "multiple": false, "options": [{ "name": "课程解释" }, { "name": "升学规划" }, { "name": "中考后转轨" }, { "name": "家长焦虑" }, { "name": "奥斯翰优势" }, { "name": "案例拆解" }] },
+        { "type": "text", "name": "家长痛点" },
+        { "type": "text", "name": "刘校长核心观点" },
+        { "type": "checkbox", "name": "是否适合刘校长" },
+        { "type": "select", "name": "优先级", "multiple": false, "options": [{ "name": "高", "hue": "Red" }, { "name": "中", "hue": "Orange" }, { "name": "低", "hue": "Gray" }] },
+        { "type": "select", "name": "适合平台", "multiple": true, "options": [{ "name": "抖音" }, { "name": "视频号" }, { "name": "小红书" }, { "name": "家长群" }] },
+        { "type": "number", "name": "复用次数", "style": { "type": "plain", "precision": 0 } },
+        { "type": "datetime", "name": "最近使用日期", "style": { "format": "yyyy-MM-dd" } },
+        { "type": "text", "name": "转化承接点" }
+      ],
+      "views": [
+        { "name": "高优先级选题", "type": "grid" },
+        { "name": "按课程看板", "type": "kanban" }
+      ]
+    },
+    {
+      "name": "脚本生产表",
+      "fields": [
+        { "type": "auto_number", "name": "脚本编号", "style": { "rules": [{ "type": "text", "text": "SCRIPT-" }, { "type": "incremental_number", "length": 3 }] } },
+        { "type": "text", "name": "关联直播主题" },
+        { "type": "select", "name": "课程方向", "multiple": false, "options": [{ "name": "A-Level" }, { "name": "IG" }, { "name": "DSE" }, { "name": "综合择校" }] },
+        { "type": "select", "name": "脚本状态", "multiple": false, "options": [{ "name": "待写" }, { "name": "初稿" }, { "name": "已审" }, { "name": "已确认" }, { "name": "已归档" }] },
+        { "type": "text", "name": "直播标题" },
+        { "type": "text", "name": "开场3分钟" },
+        { "type": "text", "name": "主体结构" },
+        { "type": "text", "name": "核心案例" },
+        { "type": "text", "name": "互动问题" },
+        { "type": "text", "name": "转化话术" },
+        { "type": "text", "name": "刘校长修改意见" },
+        { "type": "text", "name": "最终脚本链接" }
+      ],
+      "views": [
+        { "name": "待写脚本", "type": "grid" },
+        { "name": "脚本进度看板", "type": "kanban" }
+      ]
+    },
+    {
+      "name": "物料资产表",
+      "fields": [
+        { "type": "text", "name": "物料名称" },
+        { "type": "text", "name": "关联直播主题" },
+        { "type": "select", "name": "课程方向", "multiple": false, "options": [{ "name": "A-Level" }, { "name": "IG" }, { "name": "DSE" }, { "name": "综合择校" }] },
+        { "type": "select", "name": "物料类型", "multiple": false, "options": [{ "name": "直播封面" }, { "name": "预热视频" }, { "name": "海报" }, { "name": "直播贴片" }, { "name": "二维码" }, { "name": "切片视频" }] },
+        { "type": "text", "name": "负责人" },
+        { "type": "select", "name": "状态", "multiple": false, "options": [{ "name": "待做" }, { "name": "制作中" }, { "name": "待审" }, { "name": "已确认" }, { "name": "已发布" }] },
+        { "type": "attachment", "name": "文件" },
+        { "type": "select", "name": "发布平台", "multiple": true, "options": [{ "name": "抖音" }, { "name": "视频号" }, { "name": "小红书" }, { "name": "家长群" }] },
+        { "type": "datetime", "name": "发布时间", "style": { "format": "yyyy-MM-dd HH:mm" } },
+        { "type": "text", "name": "备注" }
+      ],
+      "views": [
+        { "name": "待制作物料", "type": "grid" },
+        { "name": "物料状态看板", "type": "kanban" }
+      ]
+    },
+    {
+      "name": "直播执行表",
+      "fields": [
+        { "type": "text", "name": "关联直播主题" },
+        { "type": "select", "name": "课程方向", "multiple": false, "options": [{ "name": "A-Level" }, { "name": "IG" }, { "name": "DSE" }, { "name": "综合择校" }] },
+        { "type": "select", "name": "开播检查", "multiple": true, "options": [{ "name": "设备" }, { "name": "网络" }, { "name": "声音" }, { "name": "灯光" }, { "name": "直播间标题" }, { "name": "封面" }, { "name": "预约链接" }, { "name": "评论话术" }] },
+        { "type": "datetime", "name": "实际开始时间", "style": { "format": "yyyy-MM-dd HH:mm" } },
+        { "type": "datetime", "name": "实际结束时间", "style": { "format": "yyyy-MM-dd HH:mm" } },
+        { "type": "select", "name": "直播状态", "multiple": false, "options": [{ "name": "准备中" }, { "name": "直播中" }, { "name": "已结束" }, { "name": "异常" }] },
+        { "type": "text", "name": "异常记录" },
+        { "type": "text", "name": "场控记录" },
+        { "type": "attachment", "name": "直播录屏" }
+      ],
+      "views": [
+        { "name": "当天执行检查", "type": "grid" },
+        { "name": "执行状态看板", "type": "kanban" }
+      ]
+    },
+    {
+      "name": "评论问题库",
+      "fields": [
+        { "type": "text", "name": "问题原文" },
+        { "type": "text", "name": "来源直播主题" },
+        { "type": "select", "name": "课程方向", "multiple": false, "options": [{ "name": "A-Level" }, { "name": "IG" }, { "name": "DSE" }, { "name": "综合择校" }] },
+        { "type": "select", "name": "问题分类", "multiple": false, "options": [{ "name": "课程" }, { "name": "升学" }, { "name": "费用" }, { "name": "师资" }, { "name": "住宿" }, { "name": "安全" }, { "name": "适合人群" }, { "name": "到校咨询" }] },
+        { "type": "select", "name": "家长意向", "multiple": false, "options": [{ "name": "高" }, { "name": "中" }, { "name": "低" }, { "name": "不明确" }] },
+        { "type": "text", "name": "标准回答" },
+        { "type": "checkbox", "name": "是否可做短视频" },
+        { "type": "checkbox", "name": "是否进入顾问跟进" }
+      ],
+      "views": [
+        { "name": "高频问题沉淀", "type": "grid" },
+        { "name": "可切片问题", "type": "grid" }
+      ]
+    },
+    {
+      "name": "线索跟进表",
+      "fields": [
+        { "type": "text", "name": "家长姓名/昵称" },
+        { "type": "text", "name": "联系方式", "style": { "type": "phone" } },
+        { "type": "select", "name": "来源平台", "multiple": false, "options": [{ "name": "抖音" }, { "name": "视频号" }, { "name": "小红书" }, { "name": "微信群" }, { "name": "朋友圈" }] },
+        { "type": "text", "name": "来源直播主题" },
+        { "type": "select", "name": "孩子年级", "multiple": false, "options": [{ "name": "初一" }, { "name": "初二" }, { "name": "初三" }, { "name": "高一" }, { "name": "高二" }, { "name": "高三" }, { "name": "其他" }] },
+        { "type": "select", "name": "意向课程", "multiple": true, "options": [{ "name": "A-Level" }, { "name": "IG" }, { "name": "DSE" }, { "name": "韩国" }, { "name": "日本" }, { "name": "艺术" }, { "name": "不确定" }] },
+        { "type": "select", "name": "线索等级", "multiple": false, "options": [{ "name": "A" }, { "name": "B" }, { "name": "C" }, { "name": "待判断" }] },
+        { "type": "text", "name": "负责顾问" },
+        { "type": "datetime", "name": "首次跟进时间", "style": { "format": "yyyy-MM-dd HH:mm" } },
+        { "type": "select", "name": "跟进状态", "multiple": false, "options": [{ "name": "待联系" }, { "name": "已联系" }, { "name": "已预约" }, { "name": "已到校" }, { "name": "已报名" }, { "name": "暂缓" }, { "name": "无效" }] },
+        { "type": "text", "name": "下一步动作" },
+        { "type": "datetime", "name": "下次跟进时间", "style": { "format": "yyyy-MM-dd HH:mm" } }
+      ],
+      "views": [
+        { "name": "A/B高意向线索", "type": "grid" },
+        { "name": "待跟进线索", "type": "grid" },
+        { "name": "顾问跟进看板", "type": "kanban" }
+      ]
+    },
+    {
+      "name": "直播复盘表",
+      "fields": [
+        { "type": "text", "name": "关联直播主题" },
+        { "type": "select", "name": "课程方向", "multiple": false, "options": [{ "name": "A-Level" }, { "name": "IG" }, { "name": "DSE" }, { "name": "综合择校" }] },
+        { "type": "number", "name": "观看人数", "style": { "type": "plain", "precision": 0 } },
+        { "type": "number", "name": "峰值在线", "style": { "type": "plain", "precision": 0 } },
+        { "type": "number", "name": "平均停留", "style": { "type": "plain", "precision": 1 } },
+        { "type": "number", "name": "评论数", "style": { "type": "plain", "precision": 0 } },
+        { "type": "number", "name": "私信数", "style": { "type": "plain", "precision": 0 } },
+        { "type": "number", "name": "留资数", "style": { "type": "plain", "precision": 0 } },
+        { "type": "number", "name": "有效线索数", "style": { "type": "plain", "precision": 0 } },
+        { "type": "number", "name": "预约到校数", "style": { "type": "plain", "precision": 0 } },
+        { "type": "number", "name": "直播评分", "style": { "type": "rating", "icon": "star", "min": 1, "max": 5 } },
+        { "type": "text", "name": "表现最好片段" },
+        { "type": "text", "name": "家长高频问题" },
+        { "type": "text", "name": "下次优化建议" },
+        { "type": "checkbox", "name": "是否复播" }
+      ],
+      "views": [
+        { "name": "6月数据复盘", "type": "grid" },
+        { "name": "复播主题池", "type": "grid" }
+      ]
+    }
+  ],
+  "seedRecords": {
+    "选题库": {
+      "fields": ["选题名称", "课程方向", "选题分类", "家长痛点", "刘校长核心观点", "是否适合刘校长", "优先级", "适合平台", "复用次数", "转化承接点"],
+      "rows": [
+        ["A-Level到底难不难？家长最容易误解的5件事", "A-Level", "课程解释", "家长担心孩子跟不上、英语不够、考试太难", "A-Level不是简单或困难的问题，而是是否适合孩子的学科能力和长期规划", true, "高", ["抖音", "视频号", "家长群"], 0, "引导做A-Level适配度评估"],
+        ["IG是什么？为什么很多国际课程学生要先读IG", "IG", "课程解释", "家长分不清IG和A-Level的关系", "IG是国际课程的基础过渡层，解决语言、学科方法和考试习惯衔接", true, "高", ["抖音", "视频号", "小红书"], 0, "引导领取IG/A-Level路径图"],
+        ["DSE适合哪些孩子？和A-Level怎么选", "DSE", "升学规划", "家长不知道香港DSE和英本路线差异", "DSE与A-Level不是谁更好，而是出口、语言和孩子状态不同", true, "高", ["视频号", "小红书", "家长群"], 0, "引导做DSE路径咨询"],
+        ["中考后再转A-Level晚不晚", "A-Level", "中考后转轨", "中考后时间窗口紧，家长怕错过国际路线", "关键不是晚不晚，而是英语、数学、学习习惯和目标国家是否匹配", true, "高", ["抖音", "视频号"], 0, "预约到校评估"],
+        ["IG阶段孩子最容易掉队的三个原因", "IG", "家长焦虑", "孩子刚进国际课程不适应", "掉队往往不是智力问题，而是语言输入、学科词汇和学习方法没有搭桥", true, "中", ["抖音", "小红书"], 0, "引导咨询IG衔接方案"],
+        ["想走香港方向，DSE是不是更稳", "DSE", "升学规划", "家长想要香港出口但不确定路径", "DSE适合有香港方向诉求的家庭，但要提前判断中文、英文和学科组合", true, "中", ["视频号", "家长群"], 0, "预约DSE路径规划"]
+      ]
+    },
+    "直播排期表": {
+      "fields": ["直播主题", "课程方向", "直播日期", "直播时长", "平台", "主播", "运营负责人", "场控", "目标家长", "直播目标", "状态", "转化动作", "备注"],
+      "rows": [
+        ["A-Level到底难不难？家长最容易误解的5件事", "A-Level", "2026-06-02 19:30:00", "1.5小时", ["视频号", "抖音"], "刘校长", "卓", "待定", "A-Level意向", ["课程信任", "留资", "预约到校"], "待选题", "评论区打“评估”，承接A-Level适配度评估", "6月试运营首场建议主题"],
+        ["IG是什么？为什么很多国际课程学生要先读IG", "IG", "2026-06-04 19:30:00", "1.5小时", ["视频号", "抖音"], "刘校长", "卓", "待定", "IG意向", ["课程信任", "升学答疑"], "待选题", "评论区打“路径图”，领取IG-A-Level衔接图", "用于解释IG与A-Level衔接"],
+        ["DSE适合哪些孩子？和A-Level怎么选", "DSE", "2026-06-07 20:00:00", "1.5小时", ["视频号", "小红书"], "刘校长", "卓", "待定", "DSE意向", ["升学答疑", "留资", "预约到校"], "待选题", "评论区打“DSE”，顾问做路径判断", "适合周末深度择校"]
+      ]
+    },
+    "脚本生产表": {
+      "fields": ["关联直播主题", "课程方向", "脚本状态", "直播标题", "开场3分钟", "主体结构", "互动问题", "转化话术"],
+      "rows": [
+        ["A-Level到底难不难？家长最容易误解的5件事", "A-Level", "待写", "A-Level到底难不难？刘校长讲清楚5个误区", "从家长最担心的难度、英语和升学结果切入", "误区拆解->判断标准->奥斯翰承接->Q&A", "孩子年级/英语基础/目标国家/是否想评估", "评论区打“评估”，安排顾问做初步判断"],
+        ["IG是什么？为什么很多国际课程学生要先读IG", "IG", "待写", "IG不是多读一年，而是国际课程的地基", "解释IG和A-Level不是重复，而是衔接", "IG定位->适合学生->常见掉队原因->奥斯翰支持", "孩子现在初几/英语如何/是否准备转轨", "评论区打“路径图”领取衔接资料"],
+        ["DSE适合哪些孩子？和A-Level怎么选", "DSE", "待写", "DSE和A-Level怎么选？刘校长给家长判断标准", "从香港出口和英本出口的差异切入", "出口对比->学生适配->家庭目标->奥斯翰承接", "目标香港还是英国/中文英文基础/是否想对比", "评论区打“DSE”进入路径咨询"]
+      ]
+    },
+    "物料资产表": {
+      "fields": ["物料名称", "关联直播主题", "课程方向", "物料类型", "负责人", "状态", "发布平台", "备注"],
+      "rows": [
+        ["A-Level直播封面", "A-Level到底难不难？家长最容易误解的5件事", "A-Level", "直播封面", "卓/AI视觉", "待做", ["视频号", "抖音"], "标题突出“5个误区”"],
+        ["IG直播封面", "IG是什么？为什么很多国际课程学生要先读IG", "IG", "直播封面", "卓/AI视觉", "待做", ["视频号", "抖音"], "标题突出“国际课程地基”"],
+        ["DSE直播封面", "DSE适合哪些孩子？和A-Level怎么选", "DSE", "直播封面", "卓/AI视觉", "待做", ["视频号", "小红书"], "标题突出“路线选择”"]
+      ]
+    }
+  }
+}

@@ -81,3 +81,39 @@
 - 通过 GitHub API 确认目标仓库为 `zhouyumi123-droid/codex--`，描述为“奥斯翰CODEX执行项”。
 - 使用 Git Credential Manager 完成 GitHub 登录授权。
 - 执行 `git push -u origin main` 成功。
+
+### 进行中：飞书刘校长 6 月直播 Base 搭建
+
+用户需求：根据 0-1 执行方案，在飞书里搭建 6 月刘校长直播 A-Level、IG、DSE 三门课程的工作流，从多维表格开始。
+
+已执行：
+
+- 使用 `lark-base` 和 `lark-shared` skill。
+- 读取本地工作文件：
+  - `03_working_files_工作文件\刘校长直播_飞书多维表格字段设计.md`
+  - `03_working_files_工作文件\刘校长直播_首两周执行清单.md`
+  - `03_working_files_工作文件\刘校长直播_脚本模板.md`
+- 升级 `lark-cli`：`1.0.24` -> `1.0.29`。
+- 同步更新 larksuite CLI skills。
+- 完成飞书设备授权流程两次，浏览器端返回授权成功。
+- 查询应用 scopes，确认权限列表中包含 Base 相关权限。
+
+当前阻塞：
+
+- `auth status` 仍显示 user token 未落地：`Token does not exist or has been cleared`。
+- 使用 bot 创建 Base 时，飞书 OpenAPI 返回：
+  - `App scope not enabled: required scope base:app:create [99991672]`
+- 飞书返回权限开通链接：
+  - `https://open.feishu.cn/page/scope-apply?clientID=cli_a9763cda117a1bd7&scopes=base%3Aapp%3Acreate`
+
+已生成本地可继续执行文件：
+
+- `03_working_files_工作文件\feishu_live_base_spec.json`
+- `03_working_files_工作文件\create_feishu_live_base.mjs`
+- `03_working_files_工作文件\飞书权限阻塞与继续执行说明.md`
+
+权限生效后的继续命令：
+
+```powershell
+& 'C:\Program Files\nodejs\node.exe' '.\03_working_files_工作文件\create_feishu_live_base.mjs'
+```
