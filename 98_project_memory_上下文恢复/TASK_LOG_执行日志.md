@@ -50,3 +50,21 @@
 - 每次执行关键任务后，都应追加 `TASK_LOG_执行日志.md`。
 - 如果中途要暂停，应复制 `CHECKPOINT_TEMPLATE_断点记录模板.md` 的结构写入当前断点。
 
+### 已完成：项目本地 Git 版本管理
+
+用户需求：把整个奥斯翰项目同步到 Git。
+
+执行：
+
+- 在 `d:\codex\cdx-IDE\projects\奥斯翰国际学校` 初始化 Git 仓库。
+- 新增 `.gitignore`，排除系统缓存、临时文件、日志、本地环境和压缩包。
+- 将项目内 65 个文件加入版本管理。
+- 完成首次本地提交：
+  - commit：`ceda974`
+  - message：`Initial commit for Oxstand project`
+- 设置 `core.quotepath=false`，方便中文路径在 Git 输出中正常显示。
+
+状态：
+
+- 本地 Git 快照已完成。
+- 当前还没有配置远端仓库，所以尚未推送到 GitHub/Gitee/企业 Git。

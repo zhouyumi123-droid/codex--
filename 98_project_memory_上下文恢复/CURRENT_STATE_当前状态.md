@@ -29,6 +29,11 @@
    - `98_project_memory_上下文恢复/TASK_LOG_执行日志.md`
    - `98_project_memory_上下文恢复/CHECKPOINT_TEMPLATE_断点记录模板.md`
 
+4. 已建立本地 Git 仓库：
+   - 仓库路径：`d:\codex\cdx-IDE\projects\奥斯翰国际学校`
+   - 首次提交：`ceda974 Initial commit for Oxstand project`
+   - 远端仓库：尚未配置。
+
 ## 当前未完成/可继续推进
 
 下一步建议优先级：
@@ -42,6 +47,7 @@
 4. 生成直播封面提示词/视觉模板说明。
 5. 生成顾问承接 SOP 和 A/B/C 线索分级话术。
 6. 如用户授权使用飞书 CLI，可进一步创建飞书文档、多维表格或任务。
+7. 如用户提供 GitHub/Gitee/企业 Git 远端地址，可继续执行 `git remote add origin ...` 和 `git push`。
 
 ## 关键文件
 
@@ -69,4 +75,3 @@
 ```text
 把刘校长直播方案拆成飞书多维表格字段设计和首批执行任务清单。
 ```
-
