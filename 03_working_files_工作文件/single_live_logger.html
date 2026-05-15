@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>刘校长直播单人记录器</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #17202a;
+      --muted: #637083;
+      --line: #d9dee7;
+      --blue: #1d6fd7;
+      --green: #188853;
+      --red: #c93636;
+      --orange: #c96f12;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      padding: 14px 18px;
+      background: #101820;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    h1 { font-size: 18px; margin: 0; }
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 16px;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    h2 {
+      font-size: 15px;
+      margin: 0 0 10px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 10px 0 4px;
+    }
+    input, select, textarea, button {
+      font: inherit;
+    }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px;
+      background: #fff;
+    }
+    textarea { min-height: 76px; resize: vertical; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 9px 11px;
+      color: #fff;
+      background: var(--blue);
+      cursor: pointer;
+      min-height: 38px;
+    }
+    button.secondary { background: #53606f; }
+    button.green { background: var(--green); }
+    button.orange { background: var(--orange); }
+    button.red { background: var(--red); }
+    button:active { transform: translateY(1px); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 7px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: #f0f3f7;
+      z-index: 1;
+    }
+    .table-wrap {
+      max-height: 620px;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    .hint {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: #eaf2ff;
+      color: #174f9a;
+      font-size: 12px;
+    }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>刘校长直播单人记录器</h1>
+    <span class="pill" id="clock"></span>
+  </header>
+  <main>
+    <div>
+      <section>
+        <h2>本场信息</h2>
+        <label>直播主题</label>
+        <input id="topic" value="北大校长视角：什么样的孩子适合读国际学校？" />
+        <div class="grid2">
+          <div>
+            <label>平台</label>
+            <select id="platform">
+              <option>抖音</option>
+              <option>视频号</option>
+              <option>小红书</option>
+              <option>其他</option>
+            </select>
+          </div>
+          <div>
+            <label>直播阶段</label>
+            <select id="stage">
+              <option>开场</option>
+              <option>主体1</option>
+              <option>主体2</option>
+              <option>Q&A</option>
+              <option>转化</option>
+              <option>结束</option>
+              <option>异常</option>
+            </select>
+          </div>
+        </div>
+        <label>当前话题</label>
+        <input id="currentTopic" placeholder="例如：成绩不好才读国际学校吗？" />
+      </section>
+
+      <section style="margin-top: 12px;">
+        <h2>数据快照</h2>
+        <div class="grid3">
+          <div><label>当前在线</label><input id="online" type="number" min="0" value="0" /></div>
+          <div><label>累计场观</label><input id="views" type="number" min="0" value="0" /></div>
+          <div><label>最高在线</label><input id="peak" type="number" min="0" value="0" /></div>
+          <div><label>评论数</label><input id="comments" type="number" min="0" value="0" /></div>
+          <div><label>新增关注</label><input id="follows" type="number" min="0" value="0" /></div>
+          <div><label>私信数</label><input id="dm" type="number" min="0" value="0" /></div>
+        </div>
+        <label>关键词明细</label>
+        <input id="keywords" placeholder="例如：评估3，路线2，到校1" />
+        <label>主要问题/评论</label>
+        <textarea id="question" placeholder="粘贴高意向评论，或写一句主要问题"></textarea>
+        <label>场控动作/提醒</label>
+        <textarea id="action" placeholder="例如：提醒刘校讲适合度评估，评论区发“评估”引导"></textarea>
+        <div class="grid2">
+          <label><input id="reviewPoint" type="checkbox" style="width:auto" /> 生成复盘点</label>
+          <label><input id="clipPoint" type="checkbox" style="width:auto" /> 生成切片</label>
+        </div>
+        <div class="actions">
+          <button class="green" onclick="addRecord('数据快照')">记录快照</button>
+          <button class="orange" onclick="addRecord('高意向线索')">标记线索</button>
+          <button onclick="addRecord('切片点')">标记切片</button>
+          <button class="red" onclick="addRecord('异常')">记录异常</button>
+        </div>
+      </section>
+
+      <section style="margin-top: 12px;">
+        <h2>导出</h2>
+        <p class="hint">直播中只负责点按钮和粘贴关键信息。下播后导出 CSV，再复制/导入飞书，或交给 AI 生成复盘和线索表。</p>
+        <div class="actions">
+          <button onclick="downloadCsv()">导出 CSV</button>
+          <button class="secondary" onclick="copyCsv()">复制 CSV</button>
+          <button class="red" onclick="clearAll()">清空记录</button>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <h2>记录列表</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>类型</th>
+              <th>平台</th>
+              <th>阶段</th>
+              <th>在线</th>
+              <th>场观</th>
+              <th>评论</th>
+              <th>关注</th>
+              <th>私信</th>
+              <th>关键词/问题/动作</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const storeKey = "liu_live_single_logger_records_v1";
+    const fields = ["记录时间点","记录类型","来源直播","平台","直播阶段","当前话题","当前在线","累计场观","最高在线","评论数","新增关注","私信数","关键词明细","主要问题","场控动作","是否生成复盘点","是否生成切片"];
+    let records = JSON.parse(localStorage.getItem(storeKey) || "[]");
+
+    function nowText() {
+      const d = new Date();
+      const pad = n => String(n).padStart(2, "0");
+      return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    }
+
+    function tick() {
+      document.getElementById("clock").textContent = nowText();
+    }
+    setInterval(tick, 1000);
+    tick();
+
+    function val(id) {
+      return document.getElementById(id).value.trim();
+    }
+
+    function addRecord(type) {
+      const r = {
+        "记录时间点": nowText(),
+        "记录类型": type,
+        "来源直播": val("topic"),
+        "平台": val("platform"),
+        "直播阶段": val("stage"),
+        "当前话题": val("currentTopic"),
+        "当前在线": val("online"),
+        "累计场观": val("views"),
+        "最高在线": val("peak"),
+        "评论数": val("comments"),
+        "新增关注": val("follows"),
+        "私信数": val("dm"),
+        "关键词明细": val("keywords"),
+        "主要问题": val("question"),
+        "场控动作": val("action"),
+        "是否生成复盘点": document.getElementById("reviewPoint").checked ? "是" : "否",
+        "是否生成切片": document.getElementById("clipPoint").checked ? "是" : "否"
+      };
+      records.unshift(r);
+      save();
+      render();
+      document.getElementById("question").value = "";
+      document.getElementById("action").value = "";
+      document.getElementById("reviewPoint").checked = false;
+      document.getElementById("clipPoint").checked = false;
+    }
+
+    function save() {
+      localStorage.setItem(storeKey, JSON.stringify(records));
+    }
+
+    function render() {
+      const tbody = document.getElementById("rows");
+      tbody.innerHTML = records.map(r => `
+        <tr>
+          <td>${esc(r["记录时间点"])}</td>
+          <td>${esc(r["记录类型"])}</td>
+          <td>${esc(r["平台"])}</td>
+          <td>${esc(r["直播阶段"])}</td>
+          <td>${esc(r["当前在线"])}</td>
+          <td>${esc(r["累计场观"])}</td>
+          <td>${esc(r["评论数"])}</td>
+          <td>${esc(r["新增关注"])}</td>
+          <td>${esc(r["私信数"])}</td>
+          <td><b>${esc(r["关键词明细"])}</b><br>${esc(r["主要问题"])}<br><span class="hint">${esc(r["场控动作"])}</span></td>
+        </tr>
+      `).join("");
+    }
+
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", "\"":"&quot;", "'":"&#39;" }[ch]));
+    }
+
+    function csvText() {
+      const rows = [fields, ...records.slice().reverse().map(r => fields.map(f => r[f] ?? ""))];
+      return rows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    }
+
+    function downloadCsv() {
+      const blob = new Blob(["\ufeff" + csvText()], { type: "text/csv;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `刘校长直播记录_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    async function copyCsv() {
+      await navigator.clipboard.writeText(csvText());
+      alert("CSV 已复制，可以粘贴给 AI 或飞书表格。");
+    }
+
+    function clearAll() {
+      if (!confirm("确认清空本机浏览器里的所有记录？")) return;
+      records = [];
+      save();
+      render();
+    }
+
+    render();
+  </script>
+</body>
+</html>
