@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>刘校长直播单人后台工作台 Pro</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #eef1f5;
+      --panel: #ffffff;
+      --ink: #151b23;
+      --muted: #657283;
+      --line: #d8dee8;
+      --blue: #1769d2;
+      --green: #138a54;
+      --orange: #c66a12;
+      --red: #c63535;
+      --purple: #6a4bc4;
+      --yellow: #fff6db;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+    }
+    header {
+      background: #101820;
+      color: #fff;
+      padding: 12px 16px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 12px;
+      align-items: center;
+    }
+    h1 { margin: 0; font-size: 18px; }
+    .clock, .status-chip {
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    main {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 330px 1fr 380px;
+      gap: 12px;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 15px;
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 8px 0 4px;
+    }
+    input, select, textarea, button {
+      font: inherit;
+    }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px;
+      background: #fff;
+    }
+    textarea {
+      min-height: 74px;
+      resize: vertical;
+    }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 9px 10px;
+      min-height: 38px;
+      color: #fff;
+      background: var(--blue);
+      cursor: pointer;
+    }
+    button:hover { filter: brightness(.96); }
+    button:active { transform: translateY(1px); }
+    button.green { background: var(--green); }
+    button.orange { background: var(--orange); }
+    button.red { background: var(--red); }
+    button.purple { background: var(--purple); }
+    button.gray { background: #566170; }
+    button.light {
+      color: var(--ink);
+      background: #e8edf4;
+    }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .quick-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+    .quick-buttons button { min-height: 34px; padding: 7px 8px; }
+    .metric {
+      background: #f7f9fc;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 8px;
+    }
+    .metric b { display: block; font-size: 19px; }
+    .metric span { color: var(--muted); font-size: 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 7px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: #f1f4f8;
+      z-index: 1;
+    }
+    .table-wrap {
+      max-height: 520px;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    .hint {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .note-box {
+      background: var(--yellow);
+      border: 1px solid #efd99a;
+      border-radius: 7px;
+      padding: 9px;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .script-box {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 8px;
+      font-size: 12px;
+      line-height: 1.6;
+      max-height: 180px;
+      overflow: auto;
+      white-space: pre-wrap;
+    }
+    .pill {
+      display: inline-flex;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: #eaf2ff;
+      color: #174f9a;
+      font-size: 12px;
+      margin: 2px;
+    }
+    .danger { color: var(--red); }
+    .split { display: flex; gap: 8px; align-items: center; }
+    .split > * { flex: 1; }
+    @media (max-width: 1180px) {
+      main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>刘校长直播单人后台工作台 Pro</h1>
+    <span class="clock" id="clock"></span>
+    <span class="status-chip" id="runtime">未开始</span>
+  </header>
+
+  <main>
+    <aside>
+      <section>
+        <h2>本场直播</h2>
+        <label>直播主题</label>
+        <input id="topic" value="北大校长视角：什么样的孩子适合读国际学校？">
+        <div class="grid2">
+          <div>
+            <label>平台</label>
+            <select id="platform">
+              <option>抖音</option>
+              <option>视频号</option>
+              <option>双平台</option>
+              <option>小红书</option>
+            </select>
+          </div>
+          <div>
+            <label>直播阶段</label>
+            <select id="stage">
+              <option>开场</option>
+              <option>主体1</option>
+              <option>主体2</option>
+              <option>Q&A</option>
+              <option>转化</option>
+              <option>结束</option>
+              <option>异常</option>
+            </select>
+          </div>
+        </div>
+        <label>当前话题</label>
+        <input id="currentTopic" placeholder="例如：初三转国际路线晚不晚">
+        <div class="actions">
+          <button class="green" onclick="startLive()">开始计时</button>
+          <button class="gray" onclick="stopLive()">停止</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>快捷话术</h2>
+        <div class="quick-buttons">
+          <button class="light" onclick="copyTalk('家长可以先发一下孩子年级，刘校后面会按年级讲判断。')">年级</button>
+          <button class="light" onclick="copyTalk('想判断孩子适不适合国际课程，可以打“评估”。')">评估</button>
+          <button class="light" onclick="copyTalk('纠结 A-Level、DSE 或中考后转轨，可以打“路线”。')">路线</button>
+          <button class="light" onclick="copyTalk('想预约到校详细沟通，可以打“到校”。')">到校</button>
+          <button class="light" onclick="copyTalk('想要课程资料，可以打“资料”，下播后统一整理。')">资料</button>
+          <button class="light" onclick="copyTalk('初三或中考后家庭，可以打“转轨”，这类情况要尽快看时间窗口。')">转轨</button>
+        </div>
+        <label>已复制话术</label>
+        <textarea id="copiedTalk" readonly placeholder="点击上方按钮复制话术"></textarea>
+      </section>
+
+      <section>
+        <h2>关键词计数</h2>
+        <div class="quick-buttons">
+          <button class="orange" onclick="addKeyword('评估')">评估 +1</button>
+          <button class="orange" onclick="addKeyword('到校')">到校 +1</button>
+          <button class="orange" onclick="addKeyword('转轨')">转轨 +1</button>
+          <button class="purple" onclick="addKeyword('A-Level')">A-Level +1</button>
+          <button class="purple" onclick="addKeyword('DSE')">DSE +1</button>
+          <button class="purple" onclick="addKeyword('资料')">资料 +1</button>
+        </div>
+        <div id="keywordPills" style="margin-top:8px"></div>
+      </section>
+
+      <section>
+        <h2>单人原则</h2>
+        <div class="note-box">
+          直播中只做：看稳定、记快照、标线索、标切片、记异常。<br>
+          不做复杂投流，不深聊私信，不逐条录飞书。下播后用 CSV + 截图交给 AI 整理。
+        </div>
+      </section>
+    </aside>
+
+    <section>
+      <h2>实时记录 <span class="hint">每 15 分钟快照，事件随手标记</span></h2>
+      <div class="grid3">
+        <div><label>当前在线</label><input id="online" type="number" min="0" value="0"></div>
+        <div><label>累计场观</label><input id="views" type="number" min="0" value="0"></div>
+        <div><label>最高在线</label><input id="peak" type="number" min="0" value="0"></div>
+        <div><label>平均停留秒</label><input id="avgStay" type="number" min="0" value="0"></div>
+        <div><label>评论数</label><input id="comments" type="number" min="0" value="0"></div>
+        <div><label>点赞数</label><input id="likes" type="number" min="0" value="0"></div>
+        <div><label>新增关注</label><input id="follows" type="number" min="0" value="0"></div>
+        <div><label>私信数</label><input id="dm" type="number" min="0" value="0"></div>
+        <div><label>投流金额</label><input id="adSpend" type="number" min="0" value="0"></div>
+      </div>
+
+      <label>评论/私信/主要问题</label>
+      <textarea id="question" placeholder="粘贴高意向评论，或记录：昵称 + 关键词 + 问题"></textarea>
+      <label>场控动作/刘校提醒/投流动作</label>
+      <textarea id="action" placeholder="例如：提醒刘校重复“评估”CTA；20:15 投流 100 元；在线下降，切换案例"></textarea>
+      <div class="grid2">
+        <label><input id="reviewPoint" type="checkbox" style="width:auto"> 生成复盘点</label>
+        <label><input id="clipPoint" type="checkbox" style="width:auto"> 生成切片</label>
+      </div>
+      <div class="actions">
+        <button class="green" onclick="addRecord('数据快照')">记录快照</button>
+        <button class="orange" onclick="addRecord('高意向线索')">标记线索</button>
+        <button class="purple" onclick="addRecord('切片点')">标记切片</button>
+        <button class="red" onclick="addRecord('异常')">记录异常</button>
+        <button onclick="addRecord('投流动作')">记录投流</button>
+      </div>
+
+      <section style="margin:12px 0 0; padding:0; border:0">
+        <h2>数据概览</h2>
+        <div class="grid4">
+          <div class="metric"><b id="mRecords">0</b><span>记录数</span></div>
+          <div class="metric"><b id="mLeads">0</b><span>线索点</span></div>
+          <div class="metric"><b id="mClips">0</b><span>切片点</span></div>
+          <div class="metric"><b id="mIssues">0</b><span>异常/复盘点</span></div>
+        </div>
+      </section>
+
+      <h2 style="margin-top:12px">记录列表</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>类型</th>
+              <th>阶段</th>
+              <th>在线</th>
+              <th>场观</th>
+              <th>评论</th>
+              <th>关注</th>
+              <th>关键词/问题/动作</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside>
+      <section>
+        <h2>下播导出</h2>
+        <div class="actions">
+          <button onclick="downloadCsv()">导出 CSV</button>
+          <button class="gray" onclick="copyCsv()">复制 CSV</button>
+          <button class="purple" onclick="copyAiPrompt()">复制 AI 复盘指令</button>
+          <button class="red" onclick="clearAll()">清空</button>
+        </div>
+        <p class="hint">CSV 可粘贴到飞书表格，也可以发给 AI 生成复盘、线索表、评论问题库和切片任务。</p>
+      </section>
+
+      <section>
+        <h2>AI 复盘指令</h2>
+        <div class="script-box" id="aiPrompt"></div>
+      </section>
+
+      <section>
+        <h2>A/B/C 快速判断</h2>
+        <div class="script-box">A 类：到校、明确评估、初三/中考后转轨、愿意提供孩子情况。
+B 类：路线、A-Level、DSE、费用、管理、升学问题。
+C 类：资料、泛泛围观、只点赞关注。
+
+直播中不完整分级，只标关键词和截图；下播后再整理。</div>
+      </section>
+
+      <section>
+        <h2>直播后 30 分钟</h2>
+        <div class="script-box">1. 保存录屏。
+2. 导出 CSV。
+3. 整理后台数据截图。
+4. 整理高意向评论/私信截图。
+5. 交给 AI 生成：
+   - 直播复盘表
+   - 线索跟进表
+   - 评论问题库
+   - 切片分发表
+   - 下场优化建议</div>
+      </section>
+    </aside>
+  </main>
+
+  <script>
+    const storeKey = 'liu_live_command_center_records_v1';
+    const metaKey = 'liu_live_command_center_meta_v1';
+    const kwKey = 'liu_live_command_center_keywords_v1';
+    const fields = ['记录时间点','记录类型','来源直播','平台','直播阶段','当前话题','当前在线','累计场观','最高在线','平均停留秒数','评论数','点赞数','新增关注','私信数','投流金额','关键词明细','主要问题','场控动作','是否生成复盘点','是否生成切片'];
+    let records = JSON.parse(localStorage.getItem(storeKey) || '[]');
+    let meta = JSON.parse(localStorage.getItem(metaKey) || '{}');
+    let keywords = JSON.parse(localStorage.getItem(kwKey) || '{"评估":0,"到校":0,"转轨":0,"A-Level":0,"DSE":0,"资料":0}');
+    let startedAt = meta.startedAt ? new Date(meta.startedAt) : null;
+
+    function nowText() {
+      const d = new Date();
+      const pad = n => String(n).padStart(2, '0');
+      return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    }
+    function tick() {
+      document.getElementById('clock').textContent = nowText();
+      const runtime = document.getElementById('runtime');
+      if (!startedAt) {
+        runtime.textContent = '未开始';
+      } else {
+        const mins = Math.floor((Date.now() - startedAt.getTime()) / 60000);
+        runtime.textContent = `已开播 ${mins} 分钟`;
+      }
+    }
+    setInterval(tick, 1000);
+
+    function val(id) { return document.getElementById(id).value.trim(); }
+    function num(id) { return Number(document.getElementById(id).value || 0); }
+    function keywordText() {
+      return Object.entries(keywords).filter(([,v]) => v > 0).map(([k,v]) => `${k}${v}`).join('，');
+    }
+    function save() {
+      localStorage.setItem(storeKey, JSON.stringify(records));
+      localStorage.setItem(metaKey, JSON.stringify(meta));
+      localStorage.setItem(kwKey, JSON.stringify(keywords));
+    }
+    function startLive() {
+      startedAt = new Date();
+      meta.startedAt = startedAt.toISOString();
+      save();
+      addRecord('开播');
+    }
+    function stopLive() {
+      addRecord('结束');
+      startedAt = null;
+      meta.startedAt = null;
+      save();
+      tick();
+    }
+    function addKeyword(k) {
+      keywords[k] = (keywords[k] || 0) + 1;
+      save();
+      renderKeywords();
+      document.getElementById('keywordsHidden')?.remove();
+    }
+    function addRecord(type) {
+      const r = {
+        '记录时间点': nowText(),
+        '记录类型': type,
+        '来源直播': val('topic'),
+        '平台': val('platform'),
+        '直播阶段': val('stage'),
+        '当前话题': val('currentTopic'),
+        '当前在线': num('online'),
+        '累计场观': num('views'),
+        '最高在线': num('peak'),
+        '平均停留秒数': num('avgStay'),
+        '评论数': num('comments'),
+        '点赞数': num('likes'),
+        '新增关注': num('follows'),
+        '私信数': num('dm'),
+        '投流金额': num('adSpend'),
+        '关键词明细': keywordText(),
+        '主要问题': val('question'),
+        '场控动作': val('action'),
+        '是否生成复盘点': document.getElementById('reviewPoint').checked || type === '异常' ? '是' : '否',
+        '是否生成切片': document.getElementById('clipPoint').checked || type === '切片点' ? '是' : '否',
+      };
+      records.unshift(r);
+      save();
+      render();
+      document.getElementById('question').value = '';
+      document.getElementById('action').value = '';
+      document.getElementById('reviewPoint').checked = false;
+      document.getElementById('clipPoint').checked = false;
+    }
+    function deleteRecord(idx) {
+      records.splice(idx, 1);
+      save();
+      render();
+    }
+    function renderKeywords() {
+      document.getElementById('keywordPills').innerHTML = Object.entries(keywords).map(([k,v]) => `<span class="pill">${esc(k)}：${v}</span>`).join('');
+    }
+    function renderMetrics() {
+      document.getElementById('mRecords').textContent = records.length;
+      document.getElementById('mLeads').textContent = records.filter(r => r['记录类型'] === '高意向线索').length;
+      document.getElementById('mClips').textContent = records.filter(r => r['是否生成切片'] === '是').length;
+      document.getElementById('mIssues').textContent = records.filter(r => r['是否生成复盘点'] === '是' || r['记录类型'] === '异常').length;
+    }
+    function render() {
+      renderKeywords();
+      renderMetrics();
+      document.getElementById('rows').innerHTML = records.map((r, i) => `
+        <tr>
+          <td>${esc(r['记录时间点'])}</td>
+          <td>${esc(r['记录类型'])}</td>
+          <td>${esc(r['直播阶段'])}</td>
+          <td>${esc(r['当前在线'])}</td>
+          <td>${esc(r['累计场观'])}</td>
+          <td>${esc(r['评论数'])}</td>
+          <td>${esc(r['新增关注'])}</td>
+          <td><b>${esc(r['关键词明细'])}</b><br>${esc(r['主要问题'])}<br><span class="hint">${esc(r['场控动作'])}</span></td>
+          <td><button class="red" onclick="deleteRecord(${i})">删</button></td>
+        </tr>`).join('');
+      document.getElementById('aiPrompt').textContent = aiPrompt();
+    }
+    function esc(s) {
+      return String(s ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    }
+    function csvText() {
+      const rows = [fields, ...records.slice().reverse().map(r => fields.map(f => r[f] ?? ''))];
+      return rows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',')).join('\r\n');
+    }
+    function downloadCsv() {
+      const blob = new Blob(['\ufeff' + csvText()], { type: 'text/csv;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `刘校长直播后台记录_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+    async function copyCsv() {
+      await navigator.clipboard.writeText(csvText());
+      alert('CSV 已复制。');
+    }
+    function aiPrompt() {
+      return `请根据我提供的刘校长直播后台记录 CSV、评论/私信截图和直播录屏信息，整理本场直播复盘。
+
+请输出：
+1. 核心数据摘要
+2. 数据变化时间线
+3. 评论高频问题
+4. A/B/C 线索初分级
+5. 值得切片的 6-10 个片段
+6. 下场直播优化建议
+7. 可导入飞书的直播复盘表、线索跟进表、评论问题库、切片分发表数据
+
+注意：
+- 不要夸大招生承诺。
+- A 类线索优先：到校、评估、转轨、明确课程咨询。
+- 只根据记录和截图判断，不要编造用户信息。`;
+    }
+    async function copyAiPrompt() {
+      await navigator.clipboard.writeText(aiPrompt());
+      alert('AI 复盘指令已复制。');
+    }
+    async function copyTalk(text) {
+      document.getElementById('copiedTalk').value = text;
+      await navigator.clipboard.writeText(text);
+    }
+    function clearAll() {
+      if (!confirm('确认清空本浏览器中的所有记录和关键词计数？')) return;
+      records = [];
+      keywords = {'评估':0,'到校':0,'转轨':0,'A-Level':0,'DSE':0,'资料':0};
+      save();
+      render();
+    }
+    render();
+    tick();
+  </script>
+</body>
+</html>
