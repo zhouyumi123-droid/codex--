@@ -1,0 +1,18 @@
+{
+  "baseToken": "TlV5boVxna6LTLsdl5PcFbRunv4",
+  "tables": {
+    "投流记录表": "tblmsvPYILSdevCK",
+    "周报表": "tblZMOOPD4jLAYhF"
+  },
+  "updatedTables": {
+    "直播排期表": "tbllASaJmr1YDwPN",
+    "直播执行表": "tblrtxYKxhNGSBhq",
+    "直播实时数据记录表": "tblf43zz5UgnPXDN",
+    "线索跟进表": "tblI9ZCljn7xwZaT",
+    "直播复盘表": "tbl5xl0N1OLfFPWP",
+    "自动化规则清单": "tbluCFubmqYDzkzq"
+  },
+  "as": "bot",
+  "seededInitialRecords": true,
+  "seededAutomationRules": true
+}
