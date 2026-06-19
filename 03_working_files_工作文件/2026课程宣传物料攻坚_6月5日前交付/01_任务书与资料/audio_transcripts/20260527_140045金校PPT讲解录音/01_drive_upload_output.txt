@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "identity": "user",
+  "data": {
+    "file_name": "20260527_140045金校PPT讲解录音.m4a",
+    "file_token": "J9C5bYD4ToBDM2xBtTCcsdiLn5d",
+    "size": 5637277,
+    "url": "https://www.feishu.cn/file/J9C5bYD4ToBDM2xBtTCcsdiLn5d"
+  },
+  "_notice": {
+    "update": {
+      "current": "1.0.29",
+      "latest": "1.0.41",
+      "message": "lark-cli 1.0.41 available, current 1.0.29, run: lark-cli update"
+    }
+  }
+}

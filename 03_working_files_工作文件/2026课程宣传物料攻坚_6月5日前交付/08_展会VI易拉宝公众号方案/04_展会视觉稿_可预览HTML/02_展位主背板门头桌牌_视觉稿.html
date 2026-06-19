@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>展位主背板与VI视觉稿</title>
+<style>
+:root {
+  --navy:#18265A;
+  --blue:#0E8FD8;
+  --purple:#33215F;
+  --gold:#D4A843;
+  --ivory:#FBFAF6;
+  --paper:#FFFFFF;
+  --soft:#F0F4FA;
+  --ink:#26303D;
+  --muted:#687180;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #d8dbe3; color: var(--ink); font-family: "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif; }
+h1,h2,h3,p { margin-top: 0; }
+h1 { letter-spacing: 0; }
+.brand { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.82); font-weight: 700; }
+.gold { color: var(--gold); }
+.qr { background: white; color: var(--purple); display: grid; place-items: center; text-align: center; font-weight: 800; border: 3px solid var(--gold); }
+.tag { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 5px 11px; border-radius: 999px; background: rgba(212,168,67,.16); color: var(--gold); font-weight: 800; font-size: 13px; }
+.visual-note { max-width: 980px; margin: 24px auto 10px; padding: 14px 18px; background: white; border-left: 5px solid var(--gold); color: var(--muted); line-height: 1.7; }
+
+.booth-page { width: 1280px; margin: 28px auto 46px; display:grid; gap:28px; }
+.backwall { height: 760px; position:relative; overflow:hidden; background:linear-gradient(120deg, rgba(24,38,90,.98), rgba(51,33,95,.93)); color:white; box-shadow:0 22px 55px rgba(20,28,55,.28); }
+.backwall img { position:absolute; right:0; top:0; width:56%; height:100%; object-fit:cover; opacity:.58; }
+.backwall:before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(24,38,90,1) 0%, rgba(24,38,90,.94) 42%, rgba(24,38,90,.1)); }
+.back-copy { position:relative; z-index:2; padding:72px 70px; width:720px; }
+.back-copy h1 { font-size:72px; line-height:1.05; margin:30px 0 20px; }
+.back-copy .sub { font-size:24px; line-height:1.55; color:rgba(255,255,255,.86); }
+.course-tags { display:flex; flex-wrap:wrap; gap:12px; margin:34px 0; max-width:680px; }
+.course-tags .tag { min-height:38px; padding:8px 16px; font-size:17px; background:rgba(212,168,67,.18); }
+.three { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px; }
+.three div { border-top:3px solid var(--gold); background:rgba(255,255,255,.1); padding:18px; min-height:94px; }
+.three b { display:block; font-size:21px; color:white; }
+.three p { margin:7px 0 0; color:rgba(255,255,255,.78); line-height:1.45; }
+.back-qr { position:absolute; right:64px; bottom:58px; z-index:3; display:grid; grid-template-columns:126px 220px; gap:18px; align-items:center; }
+.back-qr .qr { width:126px; height:126px; font-size:18px; }
+.back-qr b { display:block; color:white; font-size:25px; margin-bottom:8px; }
+.back-qr p { color:rgba(255,255,255,.76); line-height:1.6; margin:0; }
+.fascia { height:150px; background:var(--navy); color:white; display:flex; align-items:center; justify-content:space-between; padding:0 54px; border-bottom:10px solid var(--gold); }
+.fascia h2 { font-size:42px; margin:0; letter-spacing:0; }
+.fascia span { color:var(--gold); font-weight:800; letter-spacing:.08em; }
+.tabletop { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+.desk { min-height:310px; background:white; padding:34px; border-top:12px solid var(--gold); box-shadow:0 16px 42px rgba(20,28,55,.18); display:grid; grid-template-columns:1fr 140px; gap:30px; align-items:center; }
+.desk h3 { color:var(--navy); font-size:34px; line-height:1.15; margin-bottom:14px; }
+.desk p { color:var(--muted); line-height:1.7; font-size:17px; }
+.desk .qr { width:140px; height:140px; }
+
+</style>
+</head>
+<body>
+<div class="visual-note">展位主背板按 300cm x 230cm 的远距离识别逻辑做信息层级，门头只保留学校识别，桌牌承担扫码转化。</div>
+<main class="booth-page">
+  <section class="backwall">
+    <img src="../../05_总招生手册_初稿图文版/assets/group.jpg" alt="">
+    <div class="back-copy">
+      <p class="brand">OXSTAND INTERNATIONAL SCHOOL</p>
+      <h1>精品国际课程<br><span class="gold">多路径</span>升学规划</h1>
+      <p class="sub">深圳老牌民办国际化高中，以外语特色和多元课程，为学生打开更适合的海外升学选择。</p>
+      <div class="course-tags"><span class="tag">OSSD 中加课程</span><span class="tag">AP 国际课程</span><span class="tag">日韩小语种升学</span><span class="tag">IGCSE / A-Level</span><span class="tag">新加坡 IFD</span></div>
+      <div class="three">
+        <div><b>2004 年创校</b><p>20+ 年本土办学积累</p></div>
+        <div><b>外语特色</b><p>多语种升学出口</p></div>
+        <div><b>全流程跟进</b><p>入学评估与升学服务闭环</p></div>
+      </div>
+    </div>
+    <div class="back-qr">
+      <div class="qr">二维码<br>占位</div>
+      <div><b>扫码预约 1 对 1 学业评估</b><p>深圳市罗湖区布心路 2040 号<br>0755-25805707 / 0755-25813956</p></div>
+    </div>
+  </section>
+  <section class="fascia">
+    <h2>深圳奥斯翰外语学校国际部</h2>
+    <span>OXSTAND INTERNATIONAL SCHOOL</span>
+  </section>
+  <section class="tabletop">
+    <div class="desk">
+      <div><h3>领取课程路径建议</h3><p>现场扫码预约评估，招生老师将根据学生语言基础、学科能力、目标国家和家庭规划，给出课程路径建议。</p></div>
+      <div class="qr">预约评估<br>二维码</div>
+    </div>
+    <div class="desk">
+      <div><h3>关注招生简章</h3><p>获取 OSSD、AP、日韩、IGCSE/A-Level、新加坡 IFD 课程说明、费用与报名流程。</p></div>
+      <div class="qr">公众号<br>二维码</div>
+    </div>
+  </section>
+</main></body>
+</html>

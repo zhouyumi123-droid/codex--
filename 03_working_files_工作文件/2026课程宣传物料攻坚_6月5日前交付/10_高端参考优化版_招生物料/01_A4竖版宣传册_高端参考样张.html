@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高端参考优化版 A4 招生宣传册样张</title>
+<style>
+:root{
+  --ink:#151922;
+  --blue:#102B6F;
+  --night:#0B1331;
+  --purple:#2D214F;
+  --gold:#B7954D;
+  --paper:#F7F3EA;
+  --stone:#D9D3C8;
+  --mist:#EEF1F5;
+  --muted:#6C7280;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#cfd3da;color:var(--ink);font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif}
+h1,h2,h3,p{margin-top:0}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif}
+.smallcap{font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+.gold{color:var(--gold)}
+.rule{height:1px;background:var(--gold);width:34mm}
+.qr{background:#fff;border:1.5mm solid var(--gold);display:grid;place-items:center;text-align:center;color:var(--purple);font-weight:800}
+
+@page{size:A4 portrait;margin:0}
+.page{width:210mm;height:297mm;margin:18px auto;background:var(--paper);position:relative;overflow:hidden;box-shadow:0 20px 45px rgba(9,17,38,.18);page-break-after:always}
+.cover img,.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,19,49,.96) 0%,rgba(11,19,49,.82) 38%,rgba(11,19,49,.18) 100%)}
+.cover-copy{position:absolute;z-index:2;left:20mm;top:36mm;width:112mm;color:white}
+.cover-copy .smallcap{color:rgba(255,255,255,.72)}
+.cover-copy h1{font-size:37pt;line-height:1.12;letter-spacing:0;margin:22mm 0 7mm}
+.cover-copy .sub{font-size:13pt;line-height:1.85;color:rgba(255,255,255,.84);width:92mm}
+.cover-copy .rule{margin:12mm 0 7mm}
+.cover-index{position:absolute;z-index:2;left:20mm;bottom:20mm;color:white;display:flex;gap:7mm;align-items:center}
+.cover-index span{font-size:8.5pt;color:rgba(255,255,255,.7)}
+.folio{position:absolute;left:16mm;bottom:12mm;color:#8d918f;font-size:7.5pt;letter-spacing:.14em}
+.side-title{position:absolute;left:16mm;top:18mm;writing-mode:vertical-rl;font-size:7pt;letter-spacing:.18em;color:var(--gold);font-weight:800}
+.content{position:absolute;left:30mm;right:18mm;top:24mm;bottom:18mm}
+.spread-title{display:grid;grid-template-columns:32mm 1fr;gap:12mm;align-items:start;margin-bottom:14mm}
+.spread-title b{font-size:36pt;line-height:.9;color:var(--gold);font-family:Georgia,serif}
+.spread-title h2{font-size:26pt;line-height:1.14;margin:0;color:var(--night);letter-spacing:0}
+.intro-grid{display:grid;grid-template-columns:1fr 57mm;gap:12mm;align-items:start}
+.intro-grid p{font-size:10.4pt;line-height:1.95;color:#303746}
+.pull{margin-top:10mm;padding:9mm 0;border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);font-size:17pt;line-height:1.55;color:var(--blue)}
+.stat-strip{position:absolute;left:30mm;right:18mm;bottom:23mm;display:grid;grid-template-columns:repeat(3,1fr);gap:8mm}
+.stat-strip div{border-top:2px solid var(--gold);padding-top:4mm}
+.stat-strip b{display:block;font-size:25pt;color:var(--blue);line-height:1}
+.stat-strip span{display:block;font-size:8.5pt;color:var(--muted);margin-top:2mm}
+.bleed-photo{position:absolute;right:0;top:0;width:84mm;height:100%}
+.bleed-photo img{width:100%;height:100%;object-fit:cover}
+.bleed-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,19,49,.24),transparent)}
+.path-page .content{right:96mm}
+.path-list{position:absolute;left:30mm;right:18mm;bottom:22mm;display:grid;grid-template-columns:repeat(5,1fr);gap:2mm}
+.path-list article{background:white;border-top:1.2mm solid var(--gold);padding:4mm;min-height:45mm}
+.path-list h3{font-size:13pt;color:var(--blue);margin-bottom:2mm}
+.path-list b{font-size:8pt;color:var(--gold);letter-spacing:.08em}
+.path-list p{font-size:7.8pt;line-height:1.55;color:var(--muted)}
+.service-page{background:#fff}
+.service-page:before{content:"";position:absolute;left:0;top:0;bottom:0;width:62mm;background:var(--night)}
+.service-page .content{left:22mm;color:white}
+.service-page .spread-title{grid-template-columns:24mm 62mm;color:white}
+.service-page .spread-title h2{color:white}
+.service-body{position:absolute;left:84mm;right:18mm;top:32mm;bottom:22mm;color:var(--ink)}
+.steps{display:grid;gap:6mm}
+.steps div{display:grid;grid-template-columns:16mm 1fr;gap:5mm;border-bottom:1px solid #e6e2d8;padding-bottom:5mm}
+.steps i{font-style:normal;font-family:Georgia,serif;color:var(--gold);font-size:24pt;line-height:1}
+.steps b{display:block;font-size:12pt;color:var(--blue);margin-bottom:1.5mm}
+.steps p{font-size:9.2pt;line-height:1.7;color:var(--muted);margin:0}
+.image-led{background:#0b1331;color:white}
+.image-led img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+.image-led:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,19,49,.94),rgba(11,19,49,.14) 60%)}
+.image-led .caption{position:absolute;z-index:2;left:20mm;right:20mm;bottom:20mm}
+.image-led h2{font-size:30pt;line-height:1.16;color:white;letter-spacing:0}
+.image-led p{font-size:12pt;line-height:1.8;width:118mm;color:rgba(255,255,255,.82)}
+.back{background:var(--night);color:white}
+.back:before{content:"";position:absolute;inset:18mm;border:1px solid rgba(183,149,77,.55)}
+.back-copy{position:absolute;left:28mm;right:28mm;top:44mm}
+.back h2{font-size:31pt;line-height:1.2;color:white;letter-spacing:0}
+.contact{position:absolute;left:28mm;bottom:32mm;display:grid;grid-template-columns:36mm 1fr;gap:10mm;align-items:center}
+.contact .qr{width:36mm;height:36mm}
+.contact p{font-size:10pt;line-height:1.8;color:rgba(255,255,255,.78)}
+@media print{body{background:white}.page{margin:0;box-shadow:none}}
+
+</style>
+</head>
+<body>
+<section class="page cover">
+  <img src="../05_总招生手册_初稿图文版/assets/cover.jpg" alt="">
+  <div class="cover-copy">
+    <p class="smallcap">OXSTAND INTERNATIONAL SCHOOL</p>
+    <h1 class="serif">国际部<br>招生手册</h1>
+    <p class="sub">精品国际课程，多路径升学规划。从学生基础出发，找到更适合的海外升学路径。</p>
+    <div class="rule"></div>
+    <p class="smallcap">OSSD / AP / KUPP / JUPP / IGCSE / A-Level / IFD</p>
+  </div>
+  <div class="cover-index"><span>2026 ADMISSIONS</span><span>SHENZHEN</span></div>
+</section>
+
+<section class="page">
+  <div class="side-title">SCHOOL PROFILE</div>
+  <div class="content">
+    <div class="spread-title"><b>01</b><h2 class="serif">深圳本土办学二十余年</h2></div>
+    <div class="intro-grid">
+      <div>
+        <p>深圳奥斯翰外语学校于 2004 年经深圳市教育局批准创办，位于深圳市罗湖区布心路 2040 号。学校以“与世界同步，培育跨时代精英人才”为育人目标，植根中华传统文化，融贯东西方教育思想，依托外语特色，持续建设多元国际课程与海外升学服务体系。</p>
+        <div class="pull serif">不是把所有学生推向同一条路，而是帮助不同基础、不同目标的学生找到更适合的路径。</div>
+      </div>
+      <img style="width:57mm;height:118mm;object-fit:cover" src="../05_总招生手册_初稿图文版/assets/campus1.jpg" alt="">
+    </div>
+  </div>
+  <div class="stat-strip">
+    <div><b>2004</b><span>创校时间</span></div>
+    <div><b>20+</b><span>本土办学积累</span></div>
+    <div><b>5</b><span>国际课程方向</span></div>
+  </div>
+  <p class="folio">OXSTAND INTERNATIONAL SCHOOL</p>
+</section>
+
+<section class="page path-page">
+  <div class="bleed-photo"><img src="../05_总招生手册_初稿图文版/assets/class1.jpg" alt=""></div>
+  <div class="side-title">CURRICULUM MAP</div>
+  <div class="content">
+    <div class="spread-title"><b>02</b><h2 class="serif">先看目标国家，再选择课程路径</h2></div>
+    <p style="font-size:11pt;line-height:1.95;color:#303746">奥斯翰国际部的课程选择逻辑，是从目标国家、语言基础、学科优势和申请方式四个维度，帮助学生匹配更适合的高中阶段学习节奏。</p>
+  </div>
+  <div class="path-list">
+    <article><b>OSSD</b><h3>中加课程</h3><p>过程评价 / 安省文凭 / 多国申请</p></article><article><b>AP</b><h3>国际课程</h3><p>College Board 授权 / 学科挑战 / 综合申请</p></article><article><b>KUPP / JUPP</b><h3>日韩小语种</h3><p>韩语日语 / 文化适应 / 本科衔接</p></article><article><b>IGCSE / A-Level</b><h3>英式路径</h3><p>IGCSE 打基础 / A-Level 选科冲刺</p></article><article><b>IFD</b><h3>新加坡方向</h3><p>国内预科建设 / 新加坡本科衔接</p></article>
+  </div>
+  <p class="folio">OXSTAND INTERNATIONAL SCHOOL</p>
+</section>
+
+<section class="page service-page">
+  <div class="content">
+    <div class="spread-title"><b>03</b><h2 class="serif">升学服务不是附加项，而是三年规划的一部分</h2></div>
+  </div>
+  <div class="service-body">
+    <div class="steps">
+      <div><i>01</i><span><b>入学评估</b><p>了解英语/小语种基础、数学与学科能力、学习习惯和目标国家。</p></span></div><div><i>02</i><span><b>课程匹配</b><p>根据评估结果匹配 OSSD、AP、日韩、IGCSE/A-Level 或新加坡方向。</p></span></div><div><i>03</i><span><b>目标院校</b><p>结合学生成绩、兴趣、专业方向与家庭规划，建立阶段性目标。</p></span></div><div><i>04</i><span><b>语言考试</b><p>跟进托福、雅思、TOPIK、JLPT 等语言考试节奏。</p></span></div><div><i>05</i><span><b>材料文书</b><p>协助整理申请材料、活动经历、文书方向和推荐准备。</p></span></div><div><i>06</i><span><b>面试签证</b><p>面试辅导、签证材料与行前支持系统推进。</p></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="page image-led">
+  <img src="../05_总招生手册_初稿图文版/assets/graduation.jpg" alt="">
+  <div class="caption">
+    <p class="smallcap gold">FACULTY & GUIDANCE</p>
+    <h2 class="serif">让课程、教师、管理和升学支持<br>形成同一个闭环</h2>
+    <p>优秀课程最终要落到教师、管理和升学服务上。奥斯翰国际部围绕课程学习、学生成长和大学申请，提供持续跟踪支持。</p>
+  </div>
+</section>
+
+<section class="page back">
+  <div class="back-copy">
+    <p class="smallcap gold">OXSTAND INTERNATIONAL SCHOOL</p>
+    <h2 class="serif">预约访校，获取个性化课程路径建议</h2>
+    <div class="rule" style="margin:12mm 0"></div>
+    <p style="font-size:12pt;line-height:1.9;color:rgba(255,255,255,.78);width:118mm">如果你还不确定孩子适合哪条国际课程路径，建议先完成一次 1 对 1 学业评估。招生老师将根据学生当前语言基础、学科能力、目标国家和家庭规划，给出课程路径建议。</p>
+  </div>
+  <div class="contact">
+    <div class="qr">二维码<br>占位</div>
+    <p>深圳奥斯翰外语学校国际部<br>深圳市罗湖区布心路 2040 号<br>0755-25805707 / 0755-25813956</p>
+  </div>
+</section>
+</body>
+</html>

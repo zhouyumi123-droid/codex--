@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "identity": "user",
+  "data": {
+    "minute_url": "https://bcnletyv09fe.feishu.cn/minutes/obcnvaa228v765ez5s46z7fq"
+  },
+  "_notice": {
+    "update": {
+      "current": "1.0.29",
+      "latest": "1.0.41",
+      "message": "lark-cli 1.0.41 available, current 1.0.29, run: lark-cli update"
+    }
+  }
+}

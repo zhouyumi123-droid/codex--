@@ -1,0 +1,17 @@
+lark-cli vc +notes --as user --minute-tokens obcnvaa228v765ez5s46z7fq --output-dir .\20260527_115716金校PPT讲解录音 --overwrite --format json failed with 3
+{
+  "ok": false,
+  "identity": "user",
+  "error": {
+    "type": "missing_scope",
+    "message": "missing required scope(s): minutes:minutes:readonly, minutes:minutes.artifacts:read, minutes:minutes.transcript:export",
+    "hint": "run `lark-cli auth login --scope \"minutes:minutes:readonly minutes:minutes.artifacts:read minutes:minutes.transcript:export\"` in the background. It blocks and outputs a verification URL — retrieve the URL and open it in a browser to complete login."
+  },
+  "_notice": {
+    "update": {
+      "current": "1.0.29",
+      "latest": "1.0.41",
+      "message": "lark-cli 1.0.41 available, current 1.0.29, run: lark-cli update"
+    }
+  }
+}

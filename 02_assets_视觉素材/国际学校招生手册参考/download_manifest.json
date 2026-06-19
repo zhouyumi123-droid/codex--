@@ -1,0 +1,130 @@
+﻿[
+    {
+        "School":  "01_Hiba_Academy_Shanghai",
+        "File":  "Admissions_Brochure_2026.pdf",
+        "Status":  "OK",
+        "Bytes":  747912,
+        "Url":  "https://oss.wellingtoncollege.cn/wellington/20260407/1775527448224_05196429521856066.pdf"
+    },
+    {
+        "School":  "02_Fairview_International_School_UK",
+        "File":  "Prospectus_2024-25.pdf",
+        "Status":  "OK",
+        "Bytes":  2022668,
+        "Url":  "https://www.fairviewinternational.uk/hubfs/Fairview-Prospectus-Sept24-25.pdf"
+    },
+    {
+        "School":  "02_Fairview_International_School_UK",
+        "File":  "Fees_and_Charges_2025.pdf",
+        "Status":  "OK",
+        "Bytes":  708806,
+        "Url":  "https://www.fairviewinternational.uk/hubfs/Fairview-FeesAndCharges-12-25s.pdf"
+    },
+    {
+        "School":  "03_KIST_Tokyo",
+        "File":  "Admissions_Handbook_2025-2026.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://www.kist.ed.jp/files/pdf/Admissions%20Handbook%202025-2026_E.pdf",
+        "Error":  "远程服务器返回错误: (404) 未找到。"
+    },
+    {
+        "School":  "04_UIA_International_School_of_Tokyo",
+        "File":  "Admissions_Handbook_2025-2026.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://uia.jp/wp-content/uploads/2026/02/Admissions-Handbook-2025-2026-0128.pdf",
+        "Error":  "基础连接已经关闭: 发送时发生错误。"
+    },
+    {
+        "School":  "05_International_School_Aberdeen",
+        "File":  "ISA_Prospectus_2022-23.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://isa.aberdeen.sch.uk/assets/docs/ISA-Prospectus-22-23.pdf",
+        "Error":  "请求被中止: 连接被意外关闭。"
+    },
+    {
+        "School":  "06_Ecolint_Geneva",
+        "File":  "Prospectus.pdf",
+        "Status":  "OK",
+        "Bytes":  7597454,
+        "Url":  "https://www.ecolint.ch/en/file-download/download/public/469"
+    },
+    {
+        "School":  "06_Ecolint_Geneva",
+        "File":  "General_Financial_Conditions_2026-2027.pdf",
+        "Status":  "OK",
+        "Bytes":  491458,
+        "Url":  "https://www.ecolint.ch/en/file-download/download/public/3018"
+    },
+    {
+        "School":  "06_Ecolint_Geneva",
+        "File":  "Curriculum_Options.pdf",
+        "Status":  "OK",
+        "Bytes":  1550027,
+        "Url":  "https://www.ecolint.ch/en/file-download/download/public/494"
+    },
+    {
+        "School":  "07_BCIS_Phuket",
+        "File":  "Admissions_Handbook_2025-2026.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://www.bcisphuket.ac.th/VNTH%20-%20Berda%20Claude%20International%20School/Download%20%26%20policies/Admissions%20Handbook%202025-2026.pdf",
+        "Error":  "请求被中止: 连接被意外关闭。"
+    },
+    {
+        "School":  "07_BCIS_Phuket",
+        "File":  "School_Fees.pdf",
+        "Status":  "OK",
+        "Bytes":  246895,
+        "Url":  "https://www.bcisphuket.ac.th/VNTH%20-%20Berda%20Claude%20International%20School/Download%20%26%20policies/School%20Fees.pdf"
+    },
+    {
+        "School":  "08_Stamford_American_Singapore",
+        "File":  "Admission_Handbook_2025-2026.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://www.sais.edu.sg/cms-data/depot/images/Singapore/Campus%20Essentials/Admissions%20Handbook/SAIS_Admission%20Handbook%202025-2026.pdf",
+        "Error":  "请求被中止: 连接被意外关闭。"
+    },
+    {
+        "School":  "09_Singapore_American_School",
+        "File":  "Tuition_and_Fees_2025-2026.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://www.sas.edu.sg/fs/resource-manager/view/6e3b9bb1-8f5d-4d00-b50f-07c79b7cd366",
+        "Error":  "基础连接已经关闭: 发送时发生错误。"
+    },
+    {
+        "School":  "10_Bangkok_Prep",
+        "File":  "Prospectus_2025-26.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://www.bangkokprep.ac.th/wp-content/uploads/Prep-Prospectus-2025-Sept-Web.pdf",
+        "Error":  "远程服务器返回错误: (403) 已禁止。"
+    },
+    {
+        "School":  "10_Bangkok_Prep",
+        "File":  "Prospectus_2024.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://www.bangkokprep.ac.th/wp-content/uploads/Prep-Prospectus-2024_LR-Jan-2025.pdf",
+        "Error":  "远程服务器返回错误: (403) 已禁止。"
+    },
+    {
+        "School":  "11_Dulwich_College_Singapore",
+        "File":  "Fees_Fact_Sheet_2026-27.pdf",
+        "Status":  "OK",
+        "Bytes":  327850,
+        "Url":  "https://dulwich.blob.core.chinacloudapi.cn/dulwich-staging/blocks/20274/p/15/download-select/dulwich-college-singapore-2026-27-fees-fact-sheet-20260415-154123-784.pdf"
+    },
+    {
+        "School":  "12_Bangkok_Patana",
+        "File":  "Fee_Announcement_2026-27.pdf",
+        "Status":  "FAIL",
+        "Bytes":  0,
+        "Url":  "https://www.patana.ac.th/wp-content/uploads/2026/04/Fee-announcement-2026-7.pdf",
+        "Error":  "基础连接已经关闭: 发送时发生错误。"
+    }
+]

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高端参考优化版 展会物料样张</title>
+<style>
+:root{
+  --ink:#151922;
+  --blue:#102B6F;
+  --night:#0B1331;
+  --purple:#2D214F;
+  --gold:#B7954D;
+  --paper:#F7F3EA;
+  --stone:#D9D3C8;
+  --mist:#EEF1F5;
+  --muted:#6C7280;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#cfd3da;color:var(--ink);font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif}
+h1,h2,h3,p{margin-top:0}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif}
+.smallcap{font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+.gold{color:var(--gold)}
+.rule{height:1px;background:var(--gold);width:34mm}
+.qr{background:#fff;border:1.5mm solid var(--gold);display:grid;place-items:center;text-align:center;color:var(--purple);font-weight:800}
+
+.canvas{width:1280px;margin:24px auto 50px;display:grid;gap:26px}
+.note{background:white;border-left:5px solid var(--gold);padding:14px 18px;color:var(--muted);line-height:1.7}
+.wall{height:720px;background:var(--night);position:relative;overflow:hidden;color:white;box-shadow:0 20px 50px rgba(9,17,38,.22)}
+.wall img{position:absolute;right:0;top:0;width:58%;height:100%;object-fit:cover;filter:saturate(.82)}
+.wall:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,19,49,1) 0%,rgba(11,19,49,.96) 37%,rgba(11,19,49,.28) 78%,rgba(11,19,49,.1))}
+.wall-copy{position:absolute;z-index:2;left:70px;top:82px;width:610px}
+.wall-copy h1{font-size:66px;line-height:1.05;margin:74px 0 28px;letter-spacing:0}
+.wall-copy p{font-size:24px;line-height:1.58;color:rgba(255,255,255,.82)}
+.line-tags{position:absolute;z-index:3;left:70px;bottom:78px;display:flex;gap:18px;align-items:center}
+.line-tags span{font-size:17px;color:var(--gold);border-top:2px solid var(--gold);padding-top:12px;min-width:88px}
+.wall-qr{position:absolute;z-index:4;right:70px;bottom:58px;display:grid;grid-template-columns:118px 210px;gap:18px;align-items:center}
+.wall-qr .qr{width:118px;height:118px}
+.wall-qr b{font-size:25px}
+.wall-qr p{font-size:16px;line-height:1.7;color:rgba(255,255,255,.75)}
+.rollups{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.roll{height:940px;background:var(--paper);position:relative;overflow:hidden;box-shadow:0 18px 44px rgba(9,17,38,.18)}
+.roll img{position:absolute;left:0;top:0;width:100%;height:430px;object-fit:cover}
+.roll:before{content:"";position:absolute;left:0;top:0;width:100%;height:430px;background:linear-gradient(0deg,rgba(11,19,49,.9),rgba(11,19,49,.12));z-index:1}
+.roll-head{position:absolute;z-index:2;left:34px;right:34px;top:34px;color:white;display:flex;justify-content:space-between}
+.roll-title{position:absolute;z-index:2;left:34px;right:34px;top:240px;color:white}
+.roll-title h2{font-size:41px;line-height:1.08;margin-bottom:14px;letter-spacing:0}
+.roll-title p{font-size:15px;line-height:1.65;color:rgba(255,255,255,.82)}
+.roll-body{position:absolute;left:34px;right:34px;top:470px;bottom:142px}
+.editorial-list{display:grid;gap:18px}
+.editorial-list div{border-top:1px solid var(--stone);padding-top:16px}
+.editorial-list b{display:block;font-size:25px;color:var(--blue);margin-bottom:6px}
+.editorial-list p{font-size:14px;line-height:1.7;color:var(--muted);margin:0}
+.route-row{display:grid;grid-template-columns:64px 1fr;gap:16px;border-bottom:1px solid var(--stone);padding:14px 0}
+.route-row i{font-style:normal;color:var(--gold);font-family:Georgia,serif;font-size:28px}
+.route-row b{display:block;color:var(--blue);font-size:19px;margin-bottom:5px}
+.route-row p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.roll-foot{position:absolute;left:0;right:0;bottom:0;height:118px;background:var(--night);color:white;display:grid;grid-template-columns:86px 1fr;gap:18px;align-items:center;padding:18px 28px 18px 34px}
+.roll-foot .qr{width:74px;height:74px;font-size:12px}
+.roll-foot b{font-size:18px}
+.roll-foot p{font-size:12px;line-height:1.55;color:rgba(255,255,255,.7);margin:6px 0 0}
+
+</style>
+</head>
+<body>
+<main class="canvas">
+  <div class="note">这一版故意减少信息密度，学习海外 viewbook 的“远看主张、近看细节”逻辑：展位远距离只讲学校、主张和路径；易拉宝用于拆解细节。</div>
+  <section class="wall">
+    <img src="../05_总招生手册_初稿图文版/assets/group.jpg" alt="">
+    <div class="wall-copy">
+      <p class="smallcap">OXSTAND INTERNATIONAL SCHOOL</p>
+      <h1 class="serif">从学生基础出发<br><span class="gold">找到更适合</span><br>的国际升学路径</h1>
+      <p>OSSD、AP、日韩小语种、IGCSE/A-Level、新加坡 IFD，多路径课程体系，一对一评估匹配。</p>
+    </div>
+    <div class="line-tags"><span>OSSD</span><span>AP</span><span>KUPP / JUPP</span><span>IGCSE / A-Level</span><span>IFD</span></div>
+    <div class="wall-qr"><div class="qr">二维码<br>占位</div><div><b>预约 1 对 1 学业评估</b><p>深圳市罗湖区布心路 2040 号<br>0755-25805707 / 0755-25813956</p></div></div>
+  </section>
+  <section class="rollups">
+    <article class="roll">
+      <img src="../05_总招生手册_初稿图文版/assets/campus2.jpg" alt="">
+      <div class="roll-head"><span class="smallcap">OXSTAND INTERNATIONAL SCHOOL</span><span class="gold">01</span></div>
+      <div class="roll-title"><h2 class="serif">深圳本土办学<br>二十余年</h2><p>老牌办学积累，外语特色底色，多路径国际升学规划。</p></div>
+      <div class="roll-body"><div class="editorial-list">
+        <div><b>2004 年创校</b><p>形成稳定教学体系与升学服务基础。</p></div>
+        <div><b>外语特色</b><p>英语、日语、韩语等语言资源，服务不同国家出口。</p></div>
+        <div><b>精细化支持</b><p>更短反馈链条、更近师生关系，持续跟踪学习状态。</p></div>
+      </div></div>
+      <div class="roll-foot"><div class="qr">二维码</div><div><b>扫码预约学业评估</b><p>0755-25805707 / 0755-25813956</p></div></div>
+    </article>
+    <article class="roll">
+      <img src="../05_总招生手册_初稿图文版/assets/class1.jpg" alt="">
+      <div class="roll-head"><span class="smallcap">CURRICULUM MAP</span><span class="gold">02</span></div>
+      <div class="roll-title"><h2 class="serif">五条路径<br>对应不同目标</h2><p>先看目标国家，再选择课程路径；先看学生基础，再设计学习节奏。</p></div>
+      <div class="roll-body"><div class="route-row"><i>OSSD</i><span><b>中加课程</b><p>过程评价 / 安省文凭 / 多国申请</p></span></div><div class="route-row"><i>AP</i><span><b>国际课程</b><p>College Board 授权 / 学科挑战 / 综合申请</p></span></div><div class="route-row"><i>KUPP / JUPP</i><span><b>日韩小语种</b><p>韩语日语 / 文化适应 / 本科衔接</p></span></div><div class="route-row"><i>IGCSE / A-Level</i><span><b>英式路径</b><p>IGCSE 打基础 / A-Level 选科冲刺</p></span></div><div class="route-row"><i>IFD</i><span><b>新加坡方向</b><p>国内预科建设 / 新加坡本科衔接</p></span></div></div>
+      <div class="roll-foot"><div class="qr">二维码</div><div><b>领取课程路径建议</b><p>0755-25805707 / 0755-25813956</p></div></div>
+    </article>
+    <article class="roll">
+      <img src="../05_总招生手册_初稿图文版/assets/graduation.jpg" alt="">
+      <div class="roll-head"><span class="smallcap">GUIDANCE</span><span class="gold">03</span></div>
+      <div class="roll-title"><h2 class="serif">入学不是<br>简单报名</h2><p>先判断孩子适合哪一条路线，再安排语言、学科、考试和升学节点。</p></div>
+      <div class="roll-body"><div class="editorial-list">
+        <div><b>入学评估</b><p>语言基础、学科能力、学习习惯和目标国家。</p></div>
+        <div><b>路径匹配</b><p>匹配课程方向，形成阶段成长规划。</p></div>
+        <div><b>持续跟踪</b><p>学习进度、语言考试、家校沟通、申请节点。</p></div>
+      </div></div>
+      <div class="roll-foot"><div class="qr">二维码</div><div><b>预约访校咨询</b><p>0755-25805707 / 0755-25813956</p></div></div>
+    </article>
+  </section>
+</main></body>
+</html>

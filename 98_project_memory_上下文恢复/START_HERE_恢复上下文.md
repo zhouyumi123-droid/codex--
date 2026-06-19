@@ -40,3 +40,13 @@ d:\codex\cdx-IDE\projects\奥斯翰国际学校\98_project_memory_上下文恢�
 - 关键文件路径
 - 下一步执行顺序
 - 重要业务判断
+# 奥斯翰项目恢复入口
+
+恢复本项目上下文时，先读取本目录下的关键文件：
+
+- `CURRENT_STATE_当前状态.md`
+- `TASK_LOG_执行日志.md`
+- `SESSION_HISTORY_会话历史.md`
+- `SKILL_INDEX_技能索引.md`
+
+如果任务涉及招生宣传册、PDF 设计、HTML 预览、飞书或文档交付，优先查看 `SKILL_INDEX_技能索引.md`，并在任务中点名对应技能，例如 `brochure-design-generation`、`pdf-design`、`frontend-design`、`lark-doc`、`lark-base`。

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>奥斯翰国际部招生宣传册初稿</title>
+<style>
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #102033; background: #eee; font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
+.page { position: relative; width: 210mm; height: 297mm; overflow: hidden; background: #f7f3ea; page-break-after: always; padding: 14mm; }
+.page::after { content: ""; position: absolute; inset: auto 18mm 10mm 18mm; height: 1px; background: rgba(16,32,51,.16); }
+.brand { letter-spacing: .08em; font-size: 10px; font-weight: 700; color: #d8b76a; }
+.cover { padding: 0; color: white; }
+.cover-bg, .cover-bg img, .back-cover img, .flyer-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cover-mask { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,19,36,.92) 0%, rgba(9,42,73,.78) 42%, rgba(9,42,73,.18) 100%); }
+.cover-content { position: absolute; left: 20mm; top: 24mm; width: 58%; }
+.cover-content h1 { margin: 18mm 0 8mm; font-size: 42px; line-height: 1.18; letter-spacing: 0; }
+.cover-content p { font-size: 18px; line-height: 1.6; color: #f4ead3; }
+.cover-bottom { position: absolute; top: 145mm; display: flex; gap: 20mm; font-size: 12px; color: #e8d9ad; }
+.section-head .kicker, .kicker { color: #b58b34; font-size: 11px; font-weight: 800; letter-spacing: .12em; margin-bottom: 5mm; }
+h2 { margin: 0; font-size: 26px; line-height: 1.25; color: #102033; letter-spacing: 0; }
+.section-head p, .lead { font-size: 15px; line-height: 1.8; color: #46576b; margin: 5mm 0 0; }
+.split { display: grid; grid-template-columns: 46% 1fr; gap: 14mm; height: 100%; align-items: stretch; }
+.split.reverse { grid-template-columns: 1fr 46%; }
+.split.reverse .visual { order: 2; }
+.visual img, .image-tile img, .portrait-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 2mm; }
+.visual { min-height: 160mm; }
+.copy { align-self: center; }
+.stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5mm; margin-top: 9mm; }
+.stat-card { background: white; border-left: 4px solid #b58b34; padding: 6mm; min-height: 34mm; box-shadow: 0 8px 24px rgba(16,32,51,.08); }
+.stat-num { color: #0d496f; font-size: 24px; font-weight: 800; }
+h3 { margin: 2mm 0; font-size: 17px; color: #102033; }
+p, li { font-size: 13px; line-height: 1.65; color: #425267; }
+.profile-layout { display: grid; grid-template-columns: 45% 1fr; gap: 12mm; margin-top: 12mm; }
+.profile-copy { background: #102033; color: white; padding: 10mm; }
+.profile-copy p { color: #f3ead8; font-size: 15px; }
+.timeline { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4mm; }
+.timeline div { background: white; padding: 5mm; border-top: 3px solid #b58b34; }
+.timeline b { display: block; font-size: 24px; color: #0d496f; }
+.timeline span { font-size: 13px; color: #425267; }
+.pill-list { display: flex; flex-wrap: wrap; gap: 4mm; margin-top: 8mm; }
+.pill-list span { border: 1px solid #d9c28a; color: #102033; padding: 3mm 5mm; background: white; font-size: 14px; }
+.quote { margin-top: 10mm; padding: 8mm; background: #102033; color: #f4ead3; font-size: 19px; line-height: 1.7; }
+.course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; margin-top: 9mm; }
+.course-card { background: #102033; color: white; min-height: 48mm; padding: 7mm; display: flex; flex-direction: column; justify-content: space-between; }
+.course-card h3 { color: white; font-size: 20px; }
+.course-card p { color: #d7e0e8; }
+.tag, .course-tag { color: #d8b76a; font-size: 12px; font-weight: 800; }
+.route-table { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4mm; margin-top: 9mm; }
+.route-table div { background: white; padding: 5mm; border-left: 4px solid #0d496f; }
+.route-table strong { display: block; font-size: 17px; color: #102033; }
+.route-table span { color: #b58b34; font-weight: 800; }
+.process, .support-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 8mm; }
+.process div, .support-grid div { background: white; padding: 5mm; min-height: 44mm; }
+.process b, .support-grid b { color: #b58b34; font-size: 24px; }
+.faculty-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; margin-top: 9mm; }
+.faculty-card { background: white; padding: 5mm; min-height: 48mm; border-bottom: 3px solid #d8b76a; }
+.avatar { width: 16mm; height: 16mm; border-radius: 50%; background: #102033; color: white; display: grid; place-items: center; font-weight: 800; }
+.course-hero { display: flex; justify-content: space-between; gap: 12mm; align-items: end; padding-bottom: 8mm; border-bottom: 1px solid rgba(16,32,51,.18); }
+.course-hero h2 { font-size: 34px; }
+.course-hero p { font-size: 16px; max-width: 190mm; }
+.course-tag { background: #102033; padding: 4mm 6mm; white-space: nowrap; }
+.course-detail { display: grid; grid-template-columns: 42% 1fr 1fr; gap: 6mm; margin-top: 9mm; height: 125mm; }
+.bullet-panel, .route-panel { background: white; padding: 7mm; }
+.bullet-panel ul { padding-left: 5mm; }
+.route-panel { background: #102033; }
+.route-panel h3, .route-panel p { color: white; }
+.photo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 8mm; height: 44mm; }
+.photo-strip img { width: 100%; height: 100%; object-fit: cover; }
+.admission { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; margin-top: 12mm; }
+.admission div { background: white; padding: 8mm; min-height: 60mm; border-top: 4px solid #b58b34; }
+.back { padding: 0; color: white; }
+.back-cover { position: absolute; inset: 0; }
+.back-cover::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(5,18,33,.90), rgba(5,18,33,.58)); }
+.back-cover > div { position: absolute; z-index: 2; left: 22mm; top: 38mm; width: 58%; }
+.back-cover h2 { color: white; font-size: 38px; margin: 14mm 0; }
+.back-cover p { color: #f2e6c8; font-size: 16px; }
+.folio { position: absolute; top: 8mm; right: 18mm; font-size: 10px; color: #9a7b3b; letter-spacing: .15em; }
+.flyer-cover { position: absolute; inset: 0; color: white; }
+.flyer-cover::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(7,25,44,.35), rgba(7,25,44,.95)); }
+.flyer-cover div { position: absolute; z-index: 2; left: 14mm; right: 14mm; bottom: 24mm; }
+.flyer-cover h1 { font-size: 37px; line-height: 1.22; margin: 8mm 0; }
+.flyer .stat-grid { grid-template-columns: 1fr 1fr; }
+.portrait-image { height: 85mm; margin-top: 8mm; }
+.portrait-courses { display: grid; gap: 6mm; margin-top: 8mm; }
+.portrait-course { background: white; padding: 6mm; border-left: 4px solid #0d496f; }
+.portrait-course h3 { font-size: 21px; }
+.mini-route { color: #102033; background: #f0e3c4; padding: 3mm; font-size: 12px; margin-top: 3mm; }
+.support-grid.portrait { grid-template-columns: repeat(2, 1fr); }
+.faculty-grid.portrait { grid-template-columns: repeat(2, 1fr); }
+.photo-strip.portrait { grid-template-columns: repeat(2, 1fr); height: 66mm; }
+.admission.portrait { grid-template-columns: 1fr; gap: 4mm; }
+.admission.portrait div { min-height: auto; padding: 5mm; }
+.final-call { margin-top: 10mm; background: #102033; color: #f4ead3; padding: 8mm; font-size: 22px; font-weight: 800; text-align: center; }
+</style>
+</head>
+<body><section class="page flyer">
+    <div class="flyer-cover">
+      <img src="assets/cover.jpg" />
+      <div><div class="brand">OXSTAND INTERNATIONAL SCHOOL</div><h1>奥斯翰国际部<br/>精品课程招生简章</h1><p>多路径升学规划 · 小规模精细化支持</p></div>
+    </div>
+  </section>
+<section class="page flyer">
+    <div class="section-head"><div class="kicker">WHY OXSTAND</div><h2>为什么选择奥斯翰</h2><p>老牌办学、外语底色、小规模管理、多出口课程，是这版传单的主叙事。</p></div>
+    <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">2004</div><h3>深圳老牌民办国际化高中</h3><p>二十余年办学积累，适合强调稳定、经验与长期主义。</p></div>
+  
+    <div class="stat-card"><div class="stat-num">多语种</div><h3>外语学校底色</h3><p>英语、日语、韩语等语言资源，为多出口升学提供基础。</p></div>
+  
+    <div class="stat-card"><div class="stat-num">小规模</div><h3>更近的师生关系</h3><p>便于跟踪学生状态、学习节奏和升学节点。</p></div>
+  
+    <div class="stat-card"><div class="stat-num">多路径</div><h3>按目标国家规划课程</h3><p>AP、OSSD、韩国、日本、新加坡、IG/A-Level衔接，给学生更多选择。</p></div>
+  </div>
+    <div class="portrait-image"><img src="assets/campus1.jpg" /></div>
+  </section>
+<section class="page flyer">
+    <div class="section-head"><div class="kicker">COURSE MAP</div><h2>按目标选择课程</h2><p>先定方向，再选路径。</p></div>
+    <div class="route-table"><div><strong>目标美国/香港/多国</strong><span>AP</span><p>适合学科能力较强、希望用AP科目与标化组合提升申请竞争力的学生。</p></div><div><strong>目标加拿大/英美澳港</strong><span>OSSD</span><p>适合重视过程评价、希望借助安省高中课程体系申请多国大学的学生。</p></div><div><strong>目标韩国本科</strong><span>KUPP</span><p>适合愿意系统学习韩语、目标韩国名校及优势专业的学生。</p></div><div><strong>目标日本本科</strong><span>JUPP</span><p>适合愿意系统学习日语，并准备EJU/JLPT/校内考的学生。</p></div><div><strong>目标新加坡本科</strong><span>IFD</span><p>适合希望先在国内完成预科学习，再衔接新加坡院校的学生。</p></div><div><strong>目标英联邦/香港</strong><span>IG/A-Level</span><p>适合希望按专业方向选择3-4门核心科目并冲刺英港澳加的学生。</p></div></div>
+  </section>
+<section class="page flyer">
+      <div class="section-head"><div class="kicker">COURSE PATH</div><h2>国际课程路径</h2><p>每条路径都对应不同学生画像与申请目标。</p></div>
+      <div class="portrait-courses">
+        <div class="portrait-course">
+          <div class="tag">美国/香港/多国申请</div>
+          <h3>AP 国际课程</h3>
+          <p>适合目标美国、香港及多国综合申请的学生，用AP科目成绩、标化与语言成绩共同构建申请竞争力。</p>
+          <ul><li>College Board 授权学校，School code: 579073</li><li>G7-G10夯实英语、数学、科学与全球视野</li><li>G11-G12进入SAT与AP科目冲刺</li></ul>
+          <div class="mini-route">基础能力搭建 → AP科目组合规划 → SAT/语言考试 → 多国大学申请</div>
+        </div>
+        <div class="portrait-course">
+          <div class="tag">加拿大/英美澳港多国申请</div>
+          <h3>OSSD 中加课程</h3>
+          <p>适合希望走加拿大安大略省高中课程体系、重视过程性评价和多国申请通道的学生。</p>
+          <ul><li>与加拿大邦德多伦多学院合作设立</li><li>高二注册安大略省高中学籍，口径需按最终授权文件确认</li><li>以12年级6门4U/4M课程成绩及语言成绩作为核心申请材料</li></ul>
+          <div class="mini-route">中方基础课程 → 安省课程学习 → 12年级核心课程成绩 → 海外大学申请</div>
+        </div></div>
+    </section>
+<section class="page flyer">
+      <div class="section-head"><div class="kicker">COURSE PATH</div><h2>更多升学方向</h2><p>每条路径都对应不同学生画像与申请目标。</p></div>
+      <div class="portrait-courses">
+        <div class="portrait-course">
+          <div class="tag">韩国名校/小语种方向</div>
+          <h3>KUPP 韩国大学直升课程</h3>
+          <p>适合目标韩国本科、愿意系统学习韩语并通过TOPIK能力提升进入韩国高校申请的学生。</p>
+          <ul><li>TOPIK 1-2、3-4、5-6三年递进目标</li><li>韩国语、韩国文化与历史、留学生活指导一体化推进</li><li>可结合校内文化课程成绩与TOPIK进行韩国高校申请</li></ul>
+          <div class="mini-route">韩语入门 → TOPIK分级提升 → 文化课程与面试准备 → 韩国大学申请</div>
+        </div>
+        <div class="portrait-course">
+          <div class="tag">日本本科/日语方向</div>
+          <h3>JUPP 日本大学直升课程</h3>
+          <p>适合目标日本本科、愿意长期学习日语并准备EJU、JLPT或校内考面试的学生。</p>
+          <ul><li>日语分层学习，逐步进入升学考试准备</li><li>可结合日本文化、留学生活适应与院校申请指导</li><li>适合艺术、理工、商科、人文等不同专业方向规划</li></ul>
+          <div class="mini-route">日语基础 → JLPT/EJU准备 → 专业与院校定位 → 日本本科申请</div>
+        </div></div>
+    </section>
+<section class="page flyer">
+      <div class="section-head"><div class="kicker">COURSE PATH</div><h2>更多升学方向</h2><p>每条路径都对应不同学生画像与申请目标。</p></div>
+      <div class="portrait-courses">
+        <div class="portrait-course">
+          <div class="tag">新加坡本科衔接</div>
+          <h3>新加坡 IFD 方向</h3>
+          <p>适合希望先在国内完成语言、基础学科和预科能力建设，再衔接新加坡本科路径的学生。</p>
+          <ul><li>两年制国内学习路径，强调语言、学科与预科能力</li><li>课程覆盖学术用途英语、研究学习技巧、数学、商科、科学与艺术选修</li><li>可面向SIM、PSB Academy等新加坡院校衔接方向进行规划</li></ul>
+          <div class="mini-route">国内语言与预科学习 → 学科选修与能力评估 → 新加坡院校衔接 → 本科学位路径</div>
+        </div>
+        <div class="portrait-course">
+          <div class="tag">英联邦/香港/多国申请</div>
+          <h3>IG / A-Level 衔接方向</h3>
+          <p>适合目标英国、香港、澳洲、加拿大等方向，需要用IGCSE与A-Level科目组合建立学术画像的学生。</p>
+          <ul><li>G9-G10完成IGCSE准备，G11-G12进入A-Level阶段</li><li>数学、物理、化学、经济、商科、艺术设计等方向可按目标专业组合</li><li>采用双语过渡到全英学术环境的递进设计</li></ul>
+          <div class="mini-route">IG基础 → A-Level选科 → AS/A2考试 → UCAS及多国申请</div>
+        </div></div>
+    </section>
+<section class="page flyer">
+    <div class="section-head"><div class="kicker">SUPPORT</div><h2>学习管理与升学支持</h2><p>把课程学习、语言提升、背景活动和大学申请放在同一套节奏里。</p></div>
+    <div class="support-grid portrait"><div><b>01</b><h3>课堂学习</h3><p>由国际部团队按学生目标和阶段推进。</p></div><div><b>02</b><h3>个性化辅导</h3><p>由国际部团队按学生目标和阶段推进。</p></div><div><b>03</b><h3>语言考试</h3><p>由国际部团队按学生目标和阶段推进。</p></div><div><b>04</b><h3>选校定位</h3><p>由国际部团队按学生目标和阶段推进。</p></div><div><b>05</b><h3>文书面试</h3><p>由国际部团队按学生目标和阶段推进。</p></div><div><b>06</b><h3>签证行前</h3><p>由国际部团队按学生目标和阶段推进。</p></div></div>
+    <div class="portrait-image"><img src="assets/activity1.jpg" /></div>
+  </section>
+<section class="page flyer">
+    <div class="section-head"><div class="kicker">FACULTY &amp; CAMPUS</div><h2>师资团队与校园场景</h2><p>师资页先预留，明天确认后替换为正式照片与履历。</p></div>
+    <div class="faculty-grid portrait"><div class="faculty-card"><div class="avatar">T1</div><h3>师资待补</h3><p>姓名 / 岗位 / 课程 / 亮点</p></div><div class="faculty-card"><div class="avatar">T2</div><h3>师资待补</h3><p>姓名 / 岗位 / 课程 / 亮点</p></div><div class="faculty-card"><div class="avatar">T3</div><h3>师资待补</h3><p>姓名 / 岗位 / 课程 / 亮点</p></div><div class="faculty-card"><div class="avatar">T4</div><h3>师资待补</h3><p>姓名 / 岗位 / 课程 / 亮点</p></div><div class="faculty-card"><div class="avatar">T5</div><h3>师资待补</h3><p>姓名 / 岗位 / 课程 / 亮点</p></div><div class="faculty-card"><div class="avatar">T6</div><h3>师资待补</h3><p>姓名 / 岗位 / 课程 / 亮点</p></div></div>
+    <div class="photo-strip portrait"><img src="assets/group.jpg" /><img src="assets/sports.jpg" /></div>
+  </section>
+<section class="page flyer">
+    <div class="section-head"><div class="kicker">ADMISSION</div><h2>招生咨询</h2><p>费用、电话、二维码以最终确认版为准。</p></div>
+    <div class="admission portrait">
+      <div><h3>适合学生</h3><p>初三在读、初中毕业、高中在读及有国际课程升学需求的学生。</p></div>
+      <div><h3>咨询流程</h3><p>预约咨询 → 学业评估 → 入学测试/面试 → 路线建议 → 确认入读。</p></div>
+      <div><h3>学校地址</h3><p>深圳市罗湖区布心路2040号</p></div>
+    </div>
+    <div class="final-call">选择一条更适合孩子的国际升学路线</div>
+  </section></body>
+</html>

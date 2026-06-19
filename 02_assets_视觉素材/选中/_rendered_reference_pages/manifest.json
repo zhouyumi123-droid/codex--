@@ -1,0 +1,147 @@
+[
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 1,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 2,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 3,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\AIS_Singapore_Prospectus_2026\\page_03.png"
+  },
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 4,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\AIS_Singapore_Prospectus_2026\\page_04.png"
+  },
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 5,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\AIS_Singapore_Prospectus_2026\\page_05.png"
+  },
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 6,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\AIS_Singapore_Prospectus_2026\\page_06.png"
+  },
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 10,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Singapore_Prospectus_2026.pdf",
+    "page": 14,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\AIS_Singapore_Prospectus_2026\\page_14.png"
+  },
+  {
+    "pdf": "AIS_Admissions_Booklet_2026.pdf",
+    "page": 1,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Admissions_Booklet_2026.pdf",
+    "page": 2,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Admissions_Booklet_2026.pdf",
+    "page": 3,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Admissions_Booklet_2026.pdf",
+    "page": 4,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Admissions_Booklet_2026.pdf",
+    "page": 5,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_Admissions_Booklet_2026.pdf",
+    "page": 8,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_At_A_Glance_2026.pdf",
+    "page": 1,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_At_A_Glance_2026.pdf",
+    "page": 2,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_At_A_Glance_2026.pdf",
+    "page": 3,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "AIS_At_A_Glance_2026.pdf",
+    "page": 4,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SJI_International_Singapore_High_School_Prospectus_2027.pdf",
+    "page": 1,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\SJI_International_Singapore_High_School_Prospectus_2027\\page_01.png"
+  },
+  {
+    "pdf": "SJI_International_Singapore_High_School_Prospectus_2027.pdf",
+    "page": 2,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SJI_International_Singapore_High_School_Prospectus_2027.pdf",
+    "page": 3,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SJI_International_Singapore_High_School_Prospectus_2027.pdf",
+    "page": 4,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SJI_International_Singapore_High_School_Prospectus_2027.pdf",
+    "page": 8,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\SJI_International_Singapore_High_School_Prospectus_2027\\page_08.png"
+  },
+  {
+    "pdf": "SJI_International_Singapore_High_School_Prospectus_2027.pdf",
+    "page": 12,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SPGS_Bangkok_Prospectus.pdf",
+    "page": 1,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SPGS_Bangkok_Prospectus.pdf",
+    "page": 2,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SPGS_Bangkok_Prospectus.pdf",
+    "page": 3,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\SPGS_Bangkok_Prospectus\\page_03.png"
+  },
+  {
+    "pdf": "SPGS_Bangkok_Prospectus.pdf",
+    "page": 4,
+    "error": "Value is none of these types `String`, `Path`, "
+  },
+  {
+    "pdf": "SPGS_Bangkok_Prospectus.pdf",
+    "page": 8,
+    "out": "D:\\codex\\cdx-IDE\\projects\\奥斯翰国际学校\\02_assets_视觉素材\\选中\\_rendered_reference_pages\\SPGS_Bangkok_Prospectus\\page_08.png"
+  }
+]

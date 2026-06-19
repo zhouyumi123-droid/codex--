@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PPT Beautifier</title>
+  <style>
+    :root {
+      --navy: #163b63;
+      --blue: #1e88d1;
+      --cyan: #38bdf8;
+      --gold: #d6a84a;
+      --teal: #16a7a0;
+      --bg: #f7fafd;
+      --line: #d6e4ef;
+      --muted: #607487;
+      --text: #172033;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f7fbff 0%, #eef7ff 100%);
+    }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+    }
+    aside {
+      background: #ffffff;
+      color: var(--text);
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .brand {
+      border-left: 5px solid var(--gold);
+      padding-left: 18px;
+    }
+    .brand .eyebrow {
+      font: 700 11px Arial, sans-serif;
+      color: var(--blue);
+      letter-spacing: .08em;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: 31px;
+      line-height: 1.16;
+      margin: 0 0 14px;
+      letter-spacing: 0;
+    }
+    .brand p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 13px;
+    }
+    .tips {
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    main {
+      padding: 38px;
+    }
+    .panel {
+      max-width: 980px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 28px;
+    }
+    .panel h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      color: var(--navy);
+    }
+    .panel .sub {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .field.full { grid-column: 1 / -1; }
+    label {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--navy);
+    }
+    input, select {
+      width: 100%;
+      height: 42px;
+      border: 1px solid var(--line);
+      padding: 0 12px;
+      font: 14px "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: #fbfdff;
+      outline: none;
+    }
+    input:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(31, 94, 140, .12);
+    }
+    .hint {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+      align-items: center;
+    }
+    button {
+      border: 0;
+      height: 42px;
+      padding: 0 18px;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 700;
+      cursor: pointer;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+    button.secondary {
+      background: #e8f1f7;
+      color: var(--blue);
+    }
+    button:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+    .result {
+      max-width: 980px;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 18px 20px;
+      display: none;
+    }
+    .result.ok { border-left: 5px solid var(--gold); }
+    .result.err { border-left: 5px solid #b94646; }
+    .result strong { color: var(--navy); }
+    .result a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .cards {
+      max-width: 980px;
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 16px;
+      border-left: 4px solid var(--blue);
+    }
+    .card:nth-child(2) { border-left-color: var(--gold); }
+    .card:nth-child(3) { border-left-color: var(--teal); }
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 14px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    @media (max-width: 860px) {
+      .shell { grid-template-columns: 1fr; }
+      aside { min-height: auto; }
+      main { padding: 24px; }
+      .grid, .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">
+        <div class="eyebrow">LOCAL PPT AUTOMATION</div>
+        <h1>PPT 排版美化工具</h1>
+        <p>上传或填写本机文件路径，自动抽取文案、分页、套用蓝白高级商务版式，并插入奥斯翰项目素材图片。</p>
+      </div>
+      <div class="tips">
+        支持：docx / pptx / pdf / txt / md<br />
+        输出目录：tools/ppt_beautifier/outputs<br />
+        默认风格：奥斯翰明亮蓝白风
+      </div>
+    </aside>
+
+    <main>
+      <section class="panel">
+        <h2>生成新的美化版 PPT</h2>
+        <p class="sub">优先使用“上传文件”。如果文件很大，也可以直接粘贴本机绝对路径。</p>
+
+        <div class="grid">
+          <div class="field full">
+            <label for="file">上传文件</label>
+            <input id="file" type="file" accept=".docx,.pptx,.pdf,.txt,.md" />
+            <div class="hint">选择文件后，工具会复制到 uploads 目录再生成 PPT。</div>
+          </div>
+
+          <div class="field full">
+            <label for="inputPath">或填写本机文件路径</label>
+            <input id="inputPath" placeholder="D:\codex\cdx-IDE\projects\奥斯翰国际学校\01_source_materials_原始资料\xxx.docx" />
+          </div>
+
+          <div class="field">
+            <label for="title">输出标题</label>
+            <input id="title" placeholder="不填则使用文件名" />
+          </div>
+
+          <div class="field">
+            <label for="style">设计风格</label>
+            <select id="style">
+              <option value="oxstand_bright">奥斯翰明亮蓝白风</option>
+              <option value="clean_business">通用蓝白商务风</option>
+              <option value="fresh_edu">教育青蓝活力风</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="maxSlides">最大页数</label>
+            <input id="maxSlides" type="number" min="3" max="60" value="40" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="generate">生成 PPT</button>
+          <button id="clear" class="secondary">清空</button>
+          <span id="status" class="hint"></span>
+        </div>
+      </section>
+
+      <section id="result" class="result"></section>
+
+      <section class="cards">
+        <div class="card">
+          <h3>自动分页</h3>
+          <p>识别“第X页”“主标题”“正文”等结构；没有明确页码时，会按标题和段落自动拆页。</p>
+        </div>
+        <div class="card">
+          <h3>自动套版式</h3>
+          <p>根据内容识别封面、表格、流程、数据、联系方式等页面类型，套用对应版式。</p>
+        </div>
+        <div class="card">
+          <h3>本地运行</h3>
+          <p>工具在你的电脑本地运行，不需要联网。生成的文件会保存在 outputs 目录。</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const btn = $("generate");
+    const status = $("status");
+    const result = $("result");
+
+    function showResult(html, ok = true) {
+      result.className = "result " + (ok ? "ok" : "err");
+      result.innerHTML = html;
+      result.style.display = "block";
+    }
+
+    async function generate() {
+      btn.disabled = true;
+      status.textContent = "正在生成，请稍等...";
+      result.style.display = "none";
+      try {
+        const file = $("file").files[0];
+        const inputPath = $("inputPath").value.trim();
+        const title = $("title").value.trim();
+        const style = $("style").value;
+        const maxSlides = $("maxSlides").value || "40";
+
+        let res;
+        if (file) {
+          const fd = new FormData();
+          fd.append("file", file);
+          fd.append("title", title);
+          fd.append("style", style);
+          fd.append("maxSlides", maxSlides);
+          res = await fetch("/api/upload-generate", { method: "POST", body: fd });
+        } else {
+          res = await fetch("/api/generate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ input: inputPath, title, style, maxSlides })
+          });
+        }
+
+        const data = await res.json();
+        if (!res.ok || data.error) throw new Error(data.error || "生成失败");
+        showResult(`
+          <strong>生成成功</strong><br />
+          页数：${data.slideCount}，抽取内容块：${data.blockCount}<br />
+          输出文件：${data.relativeOutput || data.output}<br />
+          <a href="${data.download}">下载 PPTX</a>
+        `, true);
+      } catch (err) {
+        showResult(`<strong>生成失败</strong><br />${err.message}`, false);
+      } finally {
+        btn.disabled = false;
+        status.textContent = "";
+      }
+    }
+
+    btn.addEventListener("click", generate);
+    $("clear").addEventListener("click", () => {
+      $("file").value = "";
+      $("inputPath").value = "";
+      $("title").value = "";
+      $("maxSlides").value = "40";
+      result.style.display = "none";
+    });
+  </script>
+</body>
+</html>
+      border-right: 1px solid var(--line);

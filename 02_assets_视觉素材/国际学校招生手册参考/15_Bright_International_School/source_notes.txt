@@ -1,0 +1,15 @@
+﻿School: 15_Bright_International_School
+Downloaded: 2026-06-04 15:59:50
+
+File: IGCSE_Booklet_2025-2026.pdf
+URL: https://bright-is.com/wp-content/uploads/2025/03/IGCSE-Booklet_2025_2026_v3.pdf
+Note: 课程手册，Cambridge IGCSE
+
+File: IGCSE_Booklet_2026-2028.pdf
+URL: https://bright-is.com/wp-content/uploads/2026/01/IGCSE-Booklet_2026_2028_v1.pdf
+Note: 课程手册新版
+
+File: Tuition_Fees_2026-2027.pdf
+URL: https://bright-is.com/wp-content/uploads/2026/02/tuition-fees-2627-1-1.pdf
+Note: 费用表
+

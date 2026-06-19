@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A4招生单页双面视觉稿</title>
+<style>
+:root {
+  --navy:#18265A;
+  --blue:#0E8FD8;
+  --purple:#33215F;
+  --gold:#D4A843;
+  --ivory:#FBFAF6;
+  --paper:#FFFFFF;
+  --soft:#F0F4FA;
+  --ink:#26303D;
+  --muted:#687180;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #d8dbe3; color: var(--ink); font-family: "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif; }
+h1,h2,h3,p { margin-top: 0; }
+h1 { letter-spacing: 0; }
+.brand { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.82); font-weight: 700; }
+.gold { color: var(--gold); }
+.qr { background: white; color: var(--purple); display: grid; place-items: center; text-align: center; font-weight: 800; border: 3px solid var(--gold); }
+.tag { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 5px 11px; border-radius: 999px; background: rgba(212,168,67,.16); color: var(--gold); font-weight: 800; font-size: 13px; }
+.visual-note { max-width: 980px; margin: 24px auto 10px; padding: 14px 18px; background: white; border-left: 5px solid var(--gold); color: var(--muted); line-height: 1.7; }
+
+@page { size:A4 portrait; margin:0; }
+.flyer { width:210mm; min-height:297mm; margin:18px auto; background:white; box-shadow:0 16px 44px rgba(20,28,55,.18); position:relative; overflow:hidden; page-break-after:always; }
+.flyer.front { color:white; background:var(--navy); }
+.flyer.front img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.45; }
+.flyer.front:before { content:""; position:absolute; inset:0; background:linear-gradient(120deg, rgba(24,38,90,.96), rgba(51,33,95,.78) 58%, rgba(24,38,90,.2)); }
+.flyer-copy { position:relative; z-index:2; padding:28mm 18mm; }
+.flyer h1 { font-size:38pt; line-height:1.1; margin:18mm 0 8mm; }
+.flyer .sub { font-size:14pt; line-height:1.7; width:145mm; color:rgba(255,255,255,.88); }
+.flyer-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:18mm; width:160mm; }
+.flyer-tags .tag { font-size:10pt; min-height:9mm; }
+.flyer-bottom { position:absolute; left:18mm; right:18mm; bottom:18mm; display:grid; grid-template-columns:38mm 1fr; gap:8mm; align-items:center; z-index:2; }
+.flyer-bottom .qr { width:38mm; height:38mm; }
+.flyer-bottom b { color:white; font-size:16pt; }
+.flyer-bottom p { color:rgba(255,255,255,.8); line-height:1.55; }
+.flyer.back { padding:18mm; }
+.flyer.back h2 { color:var(--navy); font-size:24pt; margin-bottom:7mm; letter-spacing:0; }
+.mini-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:5mm; }
+.mini-card { border:1px solid #E0E5EF; border-left:1.5mm solid var(--gold); padding:5mm; min-height:31mm; }
+.mini-card b { color:var(--navy); font-size:12pt; }
+.mini-card p { font-size:9pt; line-height:1.55; color:var(--muted); margin:2mm 0 0; }
+.process-line { margin:8mm 0; padding:6mm; background:#F0F4FA; color:var(--navy); font-weight:800; line-height:1.8; }
+.fee { width:100%; border-collapse:collapse; margin-top:5mm; }
+.fee th { background:var(--navy); color:white; padding:3mm; font-size:9pt; text-align:left; }
+.fee td { border-bottom:1px solid #E0E5EF; padding:3mm; font-size:9pt; }
+@media print { body { background:white; } .flyer { margin:0; box-shadow:none; } }
+
+</style>
+</head>
+<body>
+<section class="flyer front">
+  <img src="../../05_总招生手册_初稿图文版/assets/campus2.jpg" alt="">
+  <div class="flyer-copy">
+    <p class="brand">OXSTAND INTERNATIONAL SCHOOL</p>
+    <h1>精品国际课程<br><span class="gold">多路径升学规划</span></h1>
+    <p class="sub">深圳老牌民办国际化高中，以外语特色和多元课程，为学生打开更适合的海外升学选择。</p>
+    <div class="flyer-tags"><span class="tag">OSSD 中加课程</span><span class="tag">AP 国际课程</span><span class="tag">日韩小语种升学</span><span class="tag">IGCSE / A-Level</span><span class="tag">新加坡 IFD</span></div>
+  </div>
+  <div class="flyer-bottom">
+    <div class="qr">二维码<br>占位</div>
+    <div><b>扫码预约 1 对 1 学业评估</b><p>深圳市罗湖区布心路 2040 号<br>0755-25805707 / 0755-25813956</p></div>
+  </div>
+</section>
+<section class="flyer back">
+  <h2>奥斯翰国际课程地图</h2>
+  <div class="mini-grid"><div class="mini-card"><b>OSSD 中加课程</b><p>安省高中毕业文凭，过程评价，6 门 12 年级成绩申请</p><p class="gold">加拿大、英美澳港多国</p></div><div class="mini-card"><b>AP 国际课程</b><p>College Board 授权，School Code 579073，高挑战学科证明</p><p class="gold">美国、香港及多国申请</p></div><div class="mini-card"><b>日韩小语种升学</b><p>TOPIK / JLPT / EJU / 面试，发挥外语学校特色</p><p class="gold">韩国、日本本科</p></div><div class="mini-card"><b>IGCSE / A-Level</b><p>IGCSE 打基础，A-Level 选科冲刺</p><p class="gold">英国、香港、澳洲、加拿大</p></div><div class="mini-card"><b>新加坡 IFD</b><p>国内完成语言与预科能力建设，再衔接新加坡本科路径</p><p class="gold">新加坡本科与后期转轨</p></div></div>
+  <div class="process-line">报名流程：预约咨询 → 入学评估 → 路径建议 → 确认课程 → 办理入读</div>
+  <h2>费用摘要</h2>
+  <table class="fee">
+    <tr><th>课程方向</th><th>学费/年</th><th>住宿餐食/年</th></tr>
+    <tr><td>OSSD 中加课程</td><td>158000 元</td><td>20300 元</td></tr>
+    <tr><td>AP 国际课程</td><td>189000 元</td><td>20300 元</td></tr>
+    <tr><td>日韩/新加坡方向</td><td>128000 元</td><td>20300 元</td></tr>
+    <tr><td>IGCSE / A-Level</td><td>128000 元</td><td>20300 元</td></tr>
+  </table>
+  <p style="font-size:9pt;color:#687180;line-height:1.7;margin-top:6mm;">学费、住宿、餐食及其他费用以学校最终公示和招生办确认为准。招生办公室：0755-25805707 / 0755-25813956；地址：深圳市罗湖区布心路 2040 号</p>
+</section></body>
+</html>
